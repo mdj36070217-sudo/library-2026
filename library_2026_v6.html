@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>사대부중도서관 담쟁이글숲 — 2026 신간도서</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#3DAA1A; --g2:#52C822; --g3:#E4F7CC;
+  --p:#F0508A; --p2:#FF85AD; --p3:#FDE8F0;
+  --r:#E82840; --r2:#FF6070;
+  --bg:#F3FBEA; --sur:#FFFFFF; --bd:#B8E890;
+  --tx:#1A3A10; --mu:#4A6A3A; --lt:#E6F5D0;
+  --rad:10px; --radl:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--tx);font-size:16px;line-height:1.7}
+button{cursor:pointer;font-family:inherit}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.nav{background:var(--g);padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;height:50px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.nav-logo{font-family:'Jua',sans-serif;font-size:17px;color:#fff;letter-spacing:-.3px}
+.nav-links{display:flex;gap:.75rem}
+.nav-links a{font-size:13px;color:rgba(255,255,255,.85);padding:4px 10px;border-radius:14px;transition:background .15s}
+.nav-links a:hover{background:rgba(255,255,255,.2);color:#fff}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1E6B10 0%,#3AB820 55%,#E82060 100%);padding:2rem 1.25rem 2.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(240,80,138,.2)}
+.hero::after{content:'';position:absolute;bottom:-30px;left:20%;width:130px;height:130px;border-radius:50%;background:rgba(255,255,150,.1)}
+.hero-label{font-size:12px;font-weight:700;color:rgba(255,255,150,.9);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.hero-title{font-family:'Jua',sans-serif;font-size:clamp(24px,6vw,38px);color:#fff;line-height:1.2;margin-bottom:8px}
+.hero-title span{color:#FFE84D}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:1.5rem;line-height:1.7}
+.hero-stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem}
+.hero-stat{background:rgba(255,255,255,.15);border-radius:var(--rad);padding:7px 12px;text-align:center;backdrop-filter:blur(4px)}
+.hero-stat .hn{font-size:22px;font-weight:700;color:#fff}
+.hero-stat .hl{font-size:12px;color:rgba(255,255,255,.7);margin-top:1px}
+
+/* QUIZ */
+.quiz-box{background:rgba(255,255,255,.95);border-radius:var(--radl);padding:1.1rem;margin-top:.5rem}
+.quiz-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.quiz-head-title{font-family:'Jua',sans-serif;font-size:15px;color:var(--g)}
+.quiz-hint{font-size:11px;color:var(--mu)}
+.quiz-q{font-size:15px;font-weight:500;color:var(--tx);margin-bottom:10px}
+.quiz-opts{display:flex;flex-wrap:wrap;gap:6px}
+.q-btn{font-size:13px;padding:7px 13px;border-radius:20px;border:1.5px solid var(--bd);background:#fff;color:var(--mu);transition:all .15s}
+.q-btn:hover{border-color:var(--p);color:var(--p)}
+.quiz-result{margin-top:10px;padding:10px 12px;background:var(--lt);border-radius:var(--rad);display:none;border-left:3px solid var(--g)}
+.quiz-result.show{display:block}
+.qr-title{font-size:15px;font-weight:700;color:var(--tx);margin-bottom:3px}
+.qr-desc{font-size:13px;color:var(--mu);margin-bottom:8px}
+.qr-btns{display:flex;gap:6px;flex-wrap:wrap}
+.qr-btn{font-size:13px;padding:5px 12px;border-radius:14px;border:1.5px solid;cursor:pointer;font-family:inherit;background:#fff}
+.qr-btn-al{border-color:var(--r);color:var(--r)}
+.qr-btn-sr{border-color:var(--g);color:var(--g)}
+
+/* HERO SEARCH SHORT */
+.hero-search{display:flex;gap:6px;margin-top:.75rem}
+.hero-search input{flex:1;padding:10px 14px;border-radius:20px;border:2px solid rgba(255,255,255,.5);background:rgba(255,255,255,.9);font-size:13px;font-family:inherit;color:var(--tx);outline:none}
+.hero-search input::placeholder{color:#999}
+.hero-search input:focus{border-color:#fff;background:#fff}
+.hero-search button{padding:9px 18px;border-radius:20px;border:none;background:#FFE84D;color:var(--g);font-size:14px;font-weight:700;white-space:nowrap}
+
+/* SECTION BASE */
+.sec{padding:1.75rem 1.25rem}
+.sec:nth-child(even){background:var(--sur)}
+.sec-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--p);margin-bottom:5px}
+.sec-title{font-family:'Jua',sans-serif;font-size:clamp(22px,5vw,32px);color:var(--tx);margin-bottom:6px}
+.sec-desc{font-size:15px;color:var(--mu);line-height:1.7;margin-bottom:1.25rem}
+
+/* EVENTS */
+.ev-period{display:inline-flex;align-items:center;gap:6px;background:var(--p3);color:var(--p);border-radius:20px;padding:5px 14px;font-size:13px;font-weight:700;margin-bottom:1rem;border:1.5px solid var(--p2)}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.ev-card{border-radius:var(--radl);overflow:hidden;border:2px solid transparent}
+.ev-card-a{background:linear-gradient(135deg,#2D9420,#52C822);border-color:#2D9420}
+.ev-card-b{background:linear-gradient(135deg,#C41850,#F0428A);border-color:#C41850}
+.ev-inner{padding:1.25rem}
+.ev-num{font-size:12px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.8);margin-bottom:6px}
+.ev-name{font-family:'Jua',sans-serif;font-size:22px;color:#fff;margin-bottom:8px;line-height:1.25}
+.ev-detail{background:rgba(0,0,0,.12);border-radius:var(--rad);padding:.75rem;margin-bottom:.75rem}
+.ev-row{display:flex;gap:8px;margin-bottom:5px;font-size:14px;color:rgba(255,255,255,.9);align-items:flex-start}
+.ev-row:last-child{margin-bottom:0}
+.ev-row-label{font-weight:700;min-width:48px;flex-shrink:0;color:#FFE84D}
+.ev-cta{display:inline-flex;align-items:center;gap:4px;background:#fff;color:var(--g);font-size:14px;font-weight:700;padding:7px 16px;border-radius:20px;border:none;margin-top:.25rem}
+.ev-cta-b{color:var(--p)}
+
+/* MAY THEMES — 북큐레이션 */
+.theme-tabs{display:flex;gap:6px;margin-bottom:1rem;flex-wrap:wrap}
+.th-tab{font-size:13px;padding:6px 14px;border-radius:20px;border:1.5px solid var(--bd);background:#fff;color:var(--mu);transition:all .15s;font-weight:500}
+.th-tab.on{background:var(--g);color:#fff;border-color:var(--g)}
+.th-pane{display:none}.th-pane.on{display:block}
+.th-intro{font-size:14px;color:var(--mu);margin-bottom:.5rem;font-style:italic}
+.th-location{display:inline-flex;align-items:center;gap:4px;background:var(--lt);color:var(--g);font-size:13px;font-weight:700;padding:3px 10px;border-radius:12px;margin-bottom:.75rem;border:1px solid var(--bd)}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px}
+.bc{background:var(--sur);border:1.5px solid var(--bd);border-radius:var(--rad);padding:10px;transition:all .15s;cursor:pointer}
+.bc:hover{border-color:var(--p);transform:translateY(-2px);box-shadow:0 4px 12px rgba(240,80,138,.15)}
+.bc-title{font-size:13px;font-weight:500;color:var(--tx);line-height:1.4;margin-bottom:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bc-author{font-size:12px;color:var(--mu);margin-bottom:5px}
+.bc-tags{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:5px}
+.bc-al{font-size:12px;font-weight:700;color:var(--r)}
+.tag{font-size:10px;font-weight:700;padding:2px 6px;border-radius:5px}
+.tag-ib{background:#D4F0B8;color:#2D7A10}
+
+/* GUESS GAME */
+.guess-box{background:var(--p3);border:2px dashed var(--p2);border-radius:var(--radl);padding:1rem;margin-top:1rem}
+.guess-title{font-family:'Jua',sans-serif;font-size:16px;color:var(--p);margin-bottom:8px}
+.guess-q{font-size:14px;color:var(--tx);margin-bottom:8px;font-weight:500}
+.guess-opts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.g-btn{font-size:13px;padding:5px 12px;border-radius:14px;border:1.5px solid var(--p2);background:#fff;color:var(--p);transition:all .15s}
+.g-btn:hover,.g-btn.sel{background:var(--p);color:#fff;border-color:var(--p)}
+.guess-result{font-size:14px;color:var(--tx);padding:8px;background:#fff;border-radius:var(--rad);display:none;line-height:1.6}
+.guess-result.show{display:block}
+
+/* SEARCH */
+.search-wrap{background:var(--sur);border:2px solid var(--bd);border-radius:var(--radl);padding:1rem;margin-bottom:.75rem}
+.search-row{display:flex;gap:6px;margin-bottom:.75rem}
+.search-row input{flex:1;padding:10px 14px;border-radius:20px;border:1.5px solid var(--bd);font-size:15px;font-family:inherit;color:var(--tx);background:#fff;outline:none;transition:border-color .15s}
+.search-row input:focus{border-color:var(--g)}
+.filter-row{display:flex;gap:5px;flex-wrap:wrap}
+.f-btn{font-size:13px;padding:4px 10px;border-radius:14px;border:1.5px solid var(--bd);background:#fff;color:var(--mu);transition:all .15s}
+.f-btn.on{background:var(--g);color:#fff;border-color:var(--g)}
+.s-count{font-size:14px;color:var(--mu);margin:8px 0}
+.s-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:8px}
+.sr{background:#fff;border:1.5px solid var(--bd);border-radius:var(--rad);padding:10px;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;gap:0}
+.sr:hover{border-color:var(--g);background:var(--lt);transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.sr-badges{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:5px;min-height:18px}
+.sr-title{font-size:13px;font-weight:600;color:var(--tx);line-height:1.4;margin-bottom:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sr-author{font-size:11px;color:var(--mu);margin-bottom:3px}
+.sr-field{font-size:11px;color:#888;margin-bottom:5px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.sr-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:4px;border-top:1px solid var(--lt)}
+.sr-cat-tag{font-size:10px;color:var(--mu);background:var(--lt);padding:1px 6px;border-radius:5px;font-weight:500}
+.sr-cat-tag.cat-ib{background:#D4F0B8;color:#2D7A10}
+.sr-al-btn{font-size:11px;font-weight:700;color:#fff;background:var(--r);padding:3px 9px;border-radius:10px;white-space:nowrap;letter-spacing:-.2px}
+.sr-al-none{font-size:11px;color:#ccc}
+.tag-subj{background:#FDE8F0;color:#C41850}
+.tag-grade{background:#E8F0FE;color:#1a5db5}
+.load-btn{display:block;margin:1rem auto 0;padding:8px 24px;border-radius:20px;border:1.5px solid var(--bd);background:#fff;color:var(--mu);font-size:14px}
+.load-btn:hover{border-color:var(--g);color:var(--g)}
+
+/* GREETINGS */
+.gr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:8px;margin-bottom:1rem}
+.gr-card{border-radius:var(--radl);padding:.9rem .5rem;text-align:center;color:#fff}
+.gr-text{font-size:22px;font-weight:700;line-height:1.2;margin-bottom:3px}
+.gr-rom{font-size:11px;opacity:.8;margin-bottom:2px}
+.gr-country{font-size:13px;font-weight:500}
+.gr-script{font-size:11px;opacity:.6;margin-top:1px}
+.gr-note{background:var(--lt);border-radius:var(--radl);padding:1rem;border:1.5px solid var(--bd)}
+.gr-note-title{font-size:15px;font-weight:500;color:var(--g);margin-bottom:5px}
+.gr-note-body{font-size:14px;color:var(--mu);line-height:1.7}
+
+/* FORM PH */
+.form-ph{background:var(--lt);border-radius:var(--radl);padding:1.5rem;text-align:center;border:2px dashed var(--bd)}
+.form-ph .icon{font-size:32px;margin-bottom:8px}
+.form-ph .ft{font-size:16px;font-weight:500;color:var(--g);margin-bottom:5px}
+.form-ph .fd{font-size:14px;color:var(--mu);line-height:1.6}
+
+/* PERIODICALS */
+.per-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px}
+.per-card{background:var(--sur);border:1.5px solid var(--bd);border-radius:var(--rad);padding:11px}
+.per-name{font-size:15px;font-weight:500;color:var(--tx);margin-bottom:4px}
+.per-cycle{display:inline-block;font-size:11px;font-weight:700;color:var(--r);background:var(--p3);padding:1px 6px;border-radius:8px;margin-right:3px;margin-bottom:4px}
+.per-topic{display:inline-block;font-size:11px;font-weight:500;color:var(--g);background:var(--lt);padding:1px 6px;border-radius:8px;margin-bottom:5px}
+.per-desc{font-size:13px;color:var(--mu);line-height:1.5}
+.per-note{font-size:12px;color:var(--g);margin-top:5px;font-weight:500}
+
+/* FOOTER */
+.footer{background:var(--g);padding:1.75rem 1.25rem}
+.footer-title{font-family:'Jua',sans-serif;font-size:16px;color:#fff;margin-bottom:5px}
+.footer-desc{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:.9rem}
+.footer-link{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.15);border-radius:var(--rad);padding:10px 18px;color:#fff;font-size:14px;font-weight:500;border:1px solid rgba(255,255,255,.3);cursor:pointer}
+.footer-link:hover{background:rgba(255,255,255,.25)}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.4);margin-top:1.25rem}
+
+@media(max-width:480px){
+  .nav-links{display:none}
+  .hero,.sec{padding-left:1rem;padding-right:1rem}
+  .ev-grid{grid-template-columns:1fr}
+}
+
+/* SITUATION BROWSER */
+.sit-grid{display:flex;flex-wrap:wrap;gap:7px;margin-top:.75rem}
+.sit-cat{display:block;font-size:12px;font-weight:700;color:var(--g);margin:1rem 0 .3rem;letter-spacing:.5px}
+.sit-btn{font-size:12px;padding:5px 12px;border-radius:18px;border:1.5px solid var(--bd);background:#fff;color:var(--mu);cursor:pointer;transition:all .15s}
+.sit-btn:hover{border-color:var(--p);color:var(--p)}
+.sit-btn.active{background:var(--p);color:#fff;border-color:var(--p)}
+
+/* MAGAZINE COVERS */
+.per-grid-v2{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.per-card-v2{border-radius:var(--radl);overflow:hidden;border:1.5px solid var(--bd);background:var(--sur)}
+.per-cover{width:100%;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;position:relative;overflow:hidden}
+.per-cover-badge{position:absolute;top:8px;left:8px;font-size:9px;font-weight:700;background:rgba(255,255,255,.9);color:#333;padding:2px 6px;border-radius:5px;letter-spacing:.5px}
+.per-cover-title{font-family:'Jua',sans-serif;font-size:18px;color:#fff;line-height:1.15;margin-bottom:3px;text-shadow:0 2px 6px rgba(0,0,0,.4)}
+.per-cover-sub{font-size:11px;color:rgba(255,255,255,.85);line-height:1.4;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.per-body{padding:10px}
+.per-name2{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.per-meta{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+.per-desc2{font-size:12px;color:var(--mu);line-height:1.5}
+
+/* VOTE / REVIEW */
+.vr-section{padding:1.75rem 1.25rem}
+.vr-tabs{display:flex;gap:6px;margin-bottom:1rem}
+.vr-tab{font-size:13px;padding:7px 16px;border-radius:20px;border:1.5px solid var(--bd);background:#fff;color:var(--mu);cursor:pointer;font-weight:500;transition:all .15s}
+.vr-tab.on{background:var(--r);color:#fff;border-color:var(--r)}
+.vr-pane{display:none}.vr-pane.on{display:block}
+.vr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin-bottom:1rem}
+.vr-card{background:#fff;border:1.5px solid var(--bd);border-radius:var(--rad);padding:9px;position:relative;transition:all .15s}
+.vr-card:hover{border-color:var(--p2)}
+.vr-title{font-size:12px;font-weight:500;color:var(--tx);line-height:1.4;margin-bottom:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vr-author{font-size:11px;color:var(--mu)}
+.vr-heart-row{display:flex;align-items:center;justify-content:flex-end;margin-top:5px;gap:4px}
+.vr-heart{font-size:17px;cursor:pointer;border:none;background:none;padding:0;line-height:1}
+.vr-cnt{font-size:11px;font-weight:700;color:var(--r)}
+.rev-form{background:var(--lt);border-radius:var(--radl);padding:1rem;border:1.5px solid var(--bd)}
+.rev-select{width:100%;padding:9px 12px;border:1.5px solid var(--bd);border-radius:var(--rad);font-size:14px;font-family:inherit;background:#fff;margin-bottom:8px;color:var(--tx)}
+.rev-inp{width:100%;padding:9px 12px;border:1.5px solid var(--bd);border-radius:var(--rad);font-size:14px;font-family:inherit;resize:vertical;min-height:65px;background:#fff;color:var(--tx)}
+.rev-inp:focus,.rev-select:focus{outline:none;border-color:var(--g)}
+.rev-submit{margin-top:8px;background:var(--g);color:#fff;border:none;border-radius:20px;padding:8px 20px;font-size:14px;font-family:inherit;font-weight:700;cursor:pointer}
+.rev-list{margin-top:1rem}
+.rev-item{background:#fff;border-left:3px solid var(--g);border-radius:var(--rad);padding:9px 11px;margin-bottom:7px}
+.rev-book{font-size:12px;font-weight:700;color:var(--g);margin-bottom:3px}
+.rev-text{font-size:13px;color:var(--tx);line-height:1.6}
+
+/* FORM */
+.gform-wrap{background:#fff;border:2px solid var(--bd);border-radius:var(--radl);padding:1.25rem;max-width:560px}
+.gf-field{margin-bottom:1rem}
+.gf-label{display:block;font-size:14px;font-weight:500;color:var(--tx);margin-bottom:5px}
+.gf-required{color:var(--r);margin-left:2px}
+.gf-input{width:100%;padding:9px 12px;border:1.5px solid var(--bd);border-radius:var(--rad);font-size:14px;font-family:inherit;background:#fff;color:var(--tx)}
+.gf-input:focus{outline:none;border-color:var(--g)}
+.gf-select{width:100%;padding:9px 12px;border:1.5px solid var(--bd);border-radius:var(--rad);font-size:14px;font-family:inherit;background:#fff;color:var(--tx);appearance:none}
+.gf-textarea{width:100%;padding:9px 12px;border:1.5px solid var(--bd);border-radius:var(--rad);font-size:14px;font-family:inherit;resize:vertical;min-height:90px;background:#fff;color:var(--tx)}
+.gf-textarea:focus,.gf-select:focus{outline:none;border-color:var(--g)}
+.gf-hint{font-size:12px;color:var(--mu);margin-top:3px;line-height:1.5}
+.gf-radio-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.gf-radio{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--tx);cursor:pointer}
+.gf-submit{background:var(--g);color:#fff;border:none;border-radius:20px;padding:10px 24px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;margin-top:.5rem}
+.gf-success{display:none;background:var(--lt);border-radius:var(--rad);padding:1rem;border-left:3px solid var(--g);margin-top:1rem}
+.gf-success.show{display:block}
+
+
+/* ── EXAMPLE MESSAGES ── */
+.ex-wrap{background:var(--p3);border:1.5px solid var(--p2);border-radius:var(--radl);padding:.85rem;margin-bottom:1rem}
+.ex-toggle{background:none;border:none;font-size:14px;font-weight:700;color:var(--p);cursor:pointer;font-family:inherit;padding:0;display:flex;align-items:center;gap:5px;width:100%;text-align:left}
+.ex-arrow{transition:transform .2s;display:inline-block}
+.ex-arrow.open{transform:rotate(180deg)}
+.ex-body{margin-top:.75rem;display:none}
+.ex-body.open{display:block}
+.ex-cat-label{font-size:11px;font-weight:700;color:var(--p);letter-spacing:.8px;text-transform:uppercase;margin:.6rem 0 .3rem}
+.ex-item{background:#fff;border:1.5px solid var(--p2);border-radius:var(--rad);padding:8px 10px;margin-bottom:5px;cursor:pointer;transition:border-color .15s,background .15s}
+.ex-item:hover{border-color:var(--p);background:#fff5f9}
+.ex-item-head{font-size:11px;font-weight:700;color:var(--p);margin-bottom:2px}
+.ex-item-text{font-size:13px;color:var(--tx);line-height:1.55}
+.ex-item-src{font-size:11px;color:var(--mu);margin-top:2px;line-height:1.4}
+.ex-hint{font-size:12px;color:var(--mu);margin-top:.5rem}
+
+/* ── APA GUIDE ── */
+.apa-toggle-btn{font-size:12px;font-weight:700;color:var(--g);cursor:pointer;background:none;border:none;font-family:inherit;padding:3px 0;text-decoration:underline}
+.apa-box{background:var(--lt);border-radius:var(--rad);border-left:3px solid var(--g);padding:.7rem;margin-top:.35rem;display:none}
+.apa-box.open{display:block}
+.apa-row{margin-bottom:.5rem}
+.apa-type{font-size:11px;font-weight:700;color:var(--g);margin-bottom:1px}
+.apa-format{font-size:12px;color:var(--tx);line-height:1.55}
+.apa-eg{font-size:11px;color:var(--mu);line-height:1.55}
+.ac-notice{background:#fffbec;border:1.5px solid #F0C040;border-radius:var(--rad);padding:.7rem .9rem;font-size:12px;color:#7A5800;line-height:1.6;margin-top:.6rem}
+
+/* ── CUSTOM GREETING ── */
+.gc-wrap{background:var(--lt);border:1.5px solid var(--bd);border-radius:var(--radl);padding:.9rem;margin-top:1rem}
+.gc-title{font-family:'Jua',sans-serif;font-size:15px;color:var(--g);margin-bottom:4px}
+.gc-desc{font-size:13px;color:var(--mu);margin-bottom:.65rem}
+.gc-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.65rem}
+.gc-inp{flex:1;min-width:90px;padding:7px 10px;border:1.5px solid var(--bd);border-radius:var(--rad);font-size:13px;font-family:inherit;background:#fff;color:var(--tx)}
+.gc-inp:focus{outline:none;border-color:var(--g)}
+.gc-add{padding:7px 15px;border-radius:20px;border:none;background:var(--g);color:#fff;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap}
+.gc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:7px}
+
+
+.sr-lib-btn{font-size:11px;font-weight:700;color:#fff;background:#1D7A3A;padding:3px 9px;border-radius:10px;white-space:nowrap;letter-spacing:-.2px}
+.sr-btns{display:flex;gap:4px;flex-wrap:wrap}
+
+
+.per-link{display:block;text-align:center;font-size:12px;font-weight:700;color:var(--g);text-decoration:none;background:var(--lt);border:1px solid var(--bd);border-radius:10px;padding:5px;margin-top:6px;transition:background .15s}
+.per-link:hover{background:var(--g);color:#fff}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">사대부중도서관 담쟁이글숲</div>
+  <div class="nav-links">
+    <a href="#search">책 검색</a>
+    <a href="#may-themes">북큐레이션</a>
+    <a href="#situation">상황별 책 선택</a>
+    <a href="#vote-review">인기투표</a>
+    <a href="#events">5월 행사</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">2026 신간도서 안내</div>
+  <div class="hero-title">새 책 <span>550권</span>이<br>도착했어요</div>
+  <div class="hero-sub">담쟁이글숲 2026년 1차 신간도서목록 및 5월 도서관 행사를 안내드립니다.</div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hn">550</div><div class="hl">신간 전체</div></div>
+    <div class="hero-stat"><div class="hn">117</div><div class="hl">IB 교과추천</div></div>
+    <div class="hero-stat"><div class="hn">6</div><div class="hl">정기간행물</div></div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-head">
+      <div class="quiz-head-title">오늘 어떤 책이 땡기지? 🎯</div>
+    </div>
+    <div class="quiz-hint" style="font-size:13px;color:#666;margin-bottom:8px">답 고르면 → 실제 신간 추천 + 도서관 검색 바로 연결!</div>
+    <div class="quiz-q" id="qtext"></div>
+    <div class="quiz-opts" id="qopts"></div>
+    <div class="quiz-result" id="qresult"></div>
+  </div>
+
+  <div class="hero-search">
+    <input type="text" id="hero-search-inp" placeholder="신간 550권, 내가 보고 싶은 책이 들어왔을까? 바로 검색해보세요" oninput="heroSearch()">
+    <button onclick="goSearch()">검색 →</button>
+  </div>
+</section>
+
+
+<!-- 상황 탐색 -->
+<section class="sec" id="situation" style="background:var(--sur)">
+  <div class="sec-label">상황별 책 선택</div>
+  <div class="sec-title">지금 내 상황에 맞는 책 찾기 🔦</div>
+  <div class="sec-desc">550권 중 지금 나에게 딱 맞는 책이 있어요. 아래 상황을 눌러보세요.</div>
+  <div class="sit-grid" id="sit-grid"></div>
+</section>
+
+<!-- 신간 검색 -->
+<section class="sec" id="search">
+  <div class="sec-label">신간 전체 검색</div>
+  <div class="sec-title">550권 찾아보기</div>
+  <div class="sec-desc">제목·저자·분야·IB 교과 연계로 검색하세요. 카드에서 교과추천 정보·IB 과목·학년을 확인하고 알라딘으로 바로 이동할 수 있어요.</div>
+  <div class="search-wrap">
+    <div class="search-row">
+      <input type="text" id="search-input" placeholder="제목, 저자, 분야, IB과목, 소재 입력..." oninput="doSearch()">
+    </div>
+    <div class="filter-row" id="filter-row"></div>
+
+    <div style="margin-top:.6rem">
+      <div style="font-size:12px;font-weight:700;color:var(--mu);margin-bottom:.4rem">IB 교과 연계</div>
+      <div class="filter-row" id="ib-filter-row"></div>
+    </div>
+  </div>
+  <div class="s-count" id="s-count"></div>
+  <div class="s-results" id="s-results"></div>
+  <button class="load-btn" id="load-btn" onclick="loadMore()">더 보기</button>
+</section>
+
+<!-- 정기간행물 -->
+<section class="sec" id="periodicals" style="background:var(--sur)">
+  <div class="sec-label">정기간행물</div>
+  <div class="sec-title">2026년 구독 목록</div>
+  <div class="sec-desc">도서관에서 만날 수 있는 정기간행물 6종 (2026. 5. 1. ~ 2027. 4. 30.)</div>
+  <div style="background:var(--lt);border:1.5px solid var(--bd);border-radius:var(--rad);padding:10px 14px;margin-bottom:1.25rem;font-size:12px;color:var(--mu);line-height:1.8">
+    📌 학교도서관 안에 비치된 <strong style="color:var(--g)">당월 호는 열람만 가능</strong>하며, <strong style="color:var(--g)">지난 호는 대출 가능</strong>합니다.
+  </div>
+  <div class="per-grid-v2">
+    <div class="per-card-v2">
+      <div class="per-cover" style="background:linear-gradient(140deg,#0E4A8C 0%,#1A7BC9 60%,#2AAFD0 100%)">
+        <div class="per-cover-badge">SCIENCE DONGA</div>
+        <div style="font-size:28px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%)">🔬</div>
+        <div class="per-cover-title">과학동아</div>
+        <div class="per-cover-sub">월간 · 과학 교양·시사</div>
+      </div>
+      <div class="per-body">
+        <div class="per-meta">
+          <span class="per-cycle">월간</span>
+          <span class="per-topic">과학 교양·시사</span>
+        </div>
+        <div class="per-desc2">1986년 창간. 최신 과학 연구·이슈를 깊이 있게 다루는 국내 대표 과학 잡지.</div>
+        <a class="per-link" href="https://www.dongascience.com/magazine/list/dongascience" target="_blank" rel="noopener">공식 홈페이지 ↗</a>
+      </div>
+    </div>
+    <div class="per-card-v2">
+      <div class="per-cover" style="background:linear-gradient(140deg,#1A1A2E 0%,#8B1A6E 60%,#E84393 100%)">
+        <div class="per-cover-badge">ILLUST</div>
+        <div style="font-size:28px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%)">🎨</div>
+        <div class="per-cover-title">일러스트 ILLUST</div>
+        <div class="per-cover-sub">월간 · 일러스트·디자인</div>
+      </div>
+      <div class="per-body">
+        <div class="per-meta">
+          <span class="per-cycle">월간</span>
+          <span class="per-topic">일러스트·디자인</span>
+        </div>
+        <div class="per-desc2">국내외 일러스트레이터 작품, 인터뷰, 트렌드를 소개하는 전문 아트 잡지.</div>
+        <a class="per-link" href="https://www.illust-mag.com" target="_blank" rel="noopener">공식 홈페이지 ↗</a>
+      </div>
+    </div>
+    <div class="per-card-v2">
+      <div class="per-cover" style="background:linear-gradient(140deg,#1A6E3A 0%,#2DA84F 60%,#7DD66F 100%)">
+        <div class="per-cover-badge">중학 독서평설</div>
+        <div style="font-size:28px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%)">📖</div>
+        <div class="per-cover-title">중학 독서평설</div>
+        <div class="per-cover-sub">월간 · 독서·국어·논술</div>
+      </div>
+      <div class="per-body">
+        <div class="per-meta">
+          <span class="per-cycle">월간</span>
+          <span class="per-topic">독서·국어·논술</span>
+        </div>
+        <div class="per-desc2">중학생 독해력·배경지식 강화. 수행평가·서술형 시험의 길잡이. 지학사 발행.</div>
+        <a class="per-link" href="https://www.jihaksa.co.kr" target="_blank" rel="noopener">공식 홈페이지 ↗</a>
+      </div>
+    </div>
+    <div class="per-card-v2">
+      <div class="per-cover" style="background:linear-gradient(140deg,#4A2560 0%,#7B4FA0 60%,#A97DE0 100%)">
+        <div class="per-cover-badge">SLJ</div>
+        <div style="font-size:28px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%)">📚</div>
+        <div class="per-cover-title">학교도서관저널</div>
+        <div class="per-cover-sub">월간 · 도서관·독서교육</div>
+      </div>
+      <div class="per-body">
+        <div class="per-meta">
+          <span class="per-cycle">월간</span>
+          <span class="per-topic">도서관·독서교육</span>
+        </div>
+        <div class="per-desc2">사서·교육자 대상. 도서관 운영 노하우, 독서교육 사례, 신간 정보 수록.</div>
+        <a class="per-link" href="https://www.slj.co.kr" target="_blank" rel="noopener">공식 홈페이지 ↗</a>
+      </div>
+    </div>
+    <div class="per-card-v2">
+      <div class="per-cover" style="background:linear-gradient(140deg,#1C3A60 0%,#C0392B 60%,#E74C3C 100%)">
+        <div class="per-cover-badge">DUGOUT</div>
+        <div style="font-size:28px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%)">⚾</div>
+        <div class="per-cover-title">더그아웃매거진</div>
+        <div class="per-cover-sub">월간 · 야구·스포츠 문화</div>
+      </div>
+      <div class="per-body">
+        <div class="per-meta">
+          <span class="per-cycle">월간</span>
+          <span class="per-topic">야구·스포츠 문화</span>
+        </div>
+        <div class="per-desc2">야구 전문 매거진. 선수 심층 인터뷰, 경기 분석, 야구 문화 이야기.</div>
+        <a class="per-link" href="http://www.dugoutmag.co.kr" target="_blank" rel="noopener">공식 홈페이지 ↗</a>
+      </div>
+    </div>
+    <div class="per-card-v2">
+      <div class="per-cover" style="background:linear-gradient(140deg,#D4550A 0%,#F39C12 60%,#FDDB6D 100%)">
+        <div class="per-cover-badge">EUREKA</div>
+        <div style="font-size:28px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%)">💡</div>
+        <div class="per-cover-title">월간 유레카</div>
+        <div class="per-cover-sub">월간 · 청소년 과학·수학</div>
+      </div>
+      <div class="per-body">
+        <div class="per-meta">
+          <span class="per-cycle">월간</span>
+          <span class="per-topic">청소년 과학·수학</span>
+        </div>
+        <div class="per-desc2">호기심을 자극하는 과학·수학 교양 콘텐츠. 중학생 눈높이 흥미로운 주제.</div>
+        <a class="per-link" href="https://www.eureka-math.co.kr" target="_blank" rel="noopener">공식 홈페이지 ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 북큐레이션 -->
+<section class="sec" id="may-themes" style="background:var(--sur)">
+  <div class="sec-label">5월 북큐레이션</div>
+  <div class="sec-title">열린마음으로 고르는 책</div>
+  <div class="sec-desc">IB 학습자상 <strong>열린마음을 가진 사람</strong>과 가정의 달을 연결한 세 가지 테마 '북'큐레이션</div>
+  <div class="theme-tabs" id="theme-tabs"></div>
+  <div id="theme-panes"></div>
+
+  <div class="guess-box" id="guess-box">
+    <div class="guess-title">🎮 어떤 책이 가장 재밌을까? 맞혀봐!</div>
+    <div class="guess-q" id="guess-q"></div>
+    <div class="guess-opts" id="guess-opts"></div>
+    <div class="guess-result" id="guess-result"></div>
+  </div>
+</section>
+
+
+<!-- 인기투표·기대평 -->
+<section class="sec vr-section" id="vote-review">
+  <div class="sec-label">재미있을 것 같은 책</div>
+  <div class="sec-title">읽고 싶다! 투표 & 기대평 ❤️</div>
+  <div class="sec-desc">아직 안 읽었지만 재밌을 것 같은 신간에 투표하고, 한줄 기대평을 남겨보세요.</div>
+  <div class="vr-tabs">
+    <button class="vr-tab on" onclick="vrTab('vote')">❤️ 인기투표</button>
+    <button class="vr-tab" onclick="vrTab('review')">✏️ 기대평 쓰기</button>
+  </div>
+  <div class="vr-pane on" id="vp-vote">
+    <div class="vr-grid" id="vr-grid"></div>
+    <div style="font-size:13px;color:var(--mu)">📊 투표 결과는 이 화면에서 실시간으로 반영됩니다.</div>
+  </div>
+  <div class="vr-pane" id="vp-review">
+    <div class="rev-form">
+      <div style="font-size:14px;font-weight:500;color:var(--tx);margin-bottom:.5rem">기대평 남길 책 선택</div>
+      <select class="rev-select" id="rev-book-sel">
+        <option value="">— 책 선택 —</option>
+      </select>
+      <textarea class="rev-inp" id="rev-text-inp" placeholder="이 책이 기대되는 이유, 읽고 싶은 마음을 자유롭게 써주세요 :)"></textarea>
+      <button class="rev-submit" onclick="submitReview()">기대평 등록 →</button>
+    </div>
+    <div class="rev-list" id="rev-list"></div>
+  </div>
+</section>
+
+<!-- 5월 행사 -->
+<section class="sec" id="events">
+  <div class="sec-label">5월 도서관 행사</div>
+  <div class="sec-title">가정의 달 도서관 이벤트</div>
+  <div class="ev-period">📅 2026. 5. 1 ~ 5. 15</div>
+  <div class="ev-grid">
+
+    <div class="ev-card ev-card-a">
+      <div class="ev-inner">
+        <div class="ev-num">행사 ① 참여</div>
+        <div class="ev-name">엄마 아빠의<br>책장에서 💌</div>
+        <div class="ev-detail">
+          <div class="ev-row"><span class="ev-row-label">기간</span><span>5월 1일(금) ~ 5월 9일(금)</span></div>
+          <div class="ev-row"><span class="ev-row-label">대상</span><span>전교생 학부모</span></div>
+          <div class="ev-row"><span class="ev-row-label">방법</span><span>구글 폼에 자녀에게 전하고 싶은 말씀을 남겨주세요. 책 문구·노래 가사·영화 대사·직접 쓴 말 모두 환영합니다.</span></div>
+          <div class="ev-row"><span class="ev-row-label">전시</span><span>공개 동의 메시지는 5월 12일부터 도서관 내 게시됩니다. 비공개 선택 시 자녀에게만 카드로 전달됩니다.</span></div>
+        </div>
+        <button class="ev-cta" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">참여 폼 바로가기 →</button>
+      </div>
+    </div>
+
+    <div class="ev-card ev-card-b">
+      <div class="ev-inner">
+        <div class="ev-num">행사 ② 참여</div>
+        <div class="ev-name">다름이 틀림이<br>아닐 때 🌍</div>
+        <div class="ev-detail">
+          <div class="ev-row"><span class="ev-row-label">기간</span><span>5월 1일(금) ~ 5월 15일(목)</span></div>
+          <div class="ev-row"><span class="ev-row-label">대상</span><span>전교생</span></div>
+          <div class="ev-row"><span class="ev-row-label">방법</span><span>도서관 비치된 필사지에 마음에 드는 나라의 인사말을 직접 써보세요.</span></div>
+          <div class="ev-row"><span class="ev-row-label">전시</span><span>완성 카드를 도서관 세계지도에 부착 → 인사말 세계지도 완성!</span></div>
+        </div>
+        <button class="ev-cta ev-cta-b" onclick="document.getElementById('greetings').scrollIntoView({behavior:'smooth'})">인사말 미리보기 →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec" id="form-section">
+  <div class="sec-label">행사 ① 참여</div>
+  <div class="sec-title">엄마 아빠의 책장에서 💌</div>
+  <div class="sec-desc">
+    가정의 달 5월을 맞이하여, 부모님께서 자녀에게 전하고 싶은 한마디를 도서관에 남겨주세요.<br>
+    책 속의 문장, 노래 가사, 영화 대사, 혹은 직접 쓰신 말씀 — 어떤 형태든 소중히 담겠습니다.<br>
+    <span style="color:var(--p);font-weight:700">💌 보내주신 메시지는 카드에 담겨 소중한 자녀에게 전달됩니다.</span>
+  </div>
+
+  <!-- 예시 문구 -->
+  <div class="ex-wrap">
+    <button class="ex-toggle" onclick="toggleEx(this)">
+      📌 예시 문구 보기 — 클릭하면 자동으로 입력됩니다
+      <span class="ex-arrow" id="ex-arrow">▾</span>
+    </button>
+    <div class="ex-body" id="ex-body">
+      <div class="ex-cat-label">📖 책 속 문구</div>
+      <div class="ex-item" onclick="fillEx('책 속 문구','끝이 없는 것처럼 보이는 밤도 결국 아침이 온다.','헤르만 헤세. (1919). 데미안. 민음사.')">
+        <div class="ex-item-head">헤르만 헤세, 『데미안』</div>
+        <div class="ex-item-text">"끝이 없는 것처럼 보이는 밤도 결국 아침이 온다."</div>
+        <div class="ex-item-src">출처 예시: 헤르만 헤세. (1919). 데미안. 민음사.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('책 속 문구','새는 알에서 나오려고 투쟁한다. 알은 세계다. 태어나려고 하는 자는 하나의 세계를 파괴하지 않으면 안 된다.','헤르만 헤세. (1919). 데미안. 민음사.')">
+        <div class="ex-item-head">헤르만 헤세, 『데미안』</div>
+        <div class="ex-item-text">"새는 알에서 나오려고 투쟁한다. 알은 세계다. 태어나려고 하는 자는 하나의 세계를 파괴하지 않으면 안 된다."</div>
+        <div class="ex-item-src">출처 예시: 헤르만 헤세. (1919). 데미안. 민음사.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('책 속 문구','너는 정말 특별해. 세상 어디에도 너 같은 존재는 없어.','A. A. 밀른. (1926). 곰돌이 푸우. 현암사.')">
+        <div class="ex-item-head">A.A. 밀른, 『곰돌이 푸우』</div>
+        <div class="ex-item-text">"너는 정말 특별해. 세상 어디에도 너 같은 존재는 없어."</div>
+        <div class="ex-item-src">출처 예시: A. A. 밀른. (1926). 곰돌이 푸우. 현암사.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('책 속 문구','오늘 하루도 수고했어. 내일은 더 잘할 수 있을 거야.','앙투안 드 생텍쥐페리. (1943). 어린 왕자. 더클래식.')">
+        <div class="ex-item-head">생텍쥐페리, 『어린 왕자』</div>
+        <div class="ex-item-text">"중요한 것은 눈에 보이지 않아. 마음으로 봐야 해."</div>
+        <div class="ex-item-src">출처 예시: 앙투안 드 생텍쥐페리. (1943). 어린 왕자. 더클래식.</div>
+      </div>
+
+      <div class="ex-cat-label">💬 직접 쓴 말</div>
+      <div class="ex-item" onclick="fillEx('직접 쓴 말','어떤 날은 버티는 것만으로도 충분해. 잘 하고 있어.','')">
+        <div class="ex-item-head">위로가 필요할 때</div>
+        <div class="ex-item-text">어떤 날은 버티는 것만으로도 충분해. 잘 하고 있어.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('직접 쓴 말','네가 웃는 날이 많기를 바란다. 네 곁에 항상 있을게.','')">
+        <div class="ex-item-head">따뜻하게</div>
+        <div class="ex-item-text">네가 웃는 날이 많기를 바란다. 네 곁에 항상 있을게.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('직접 쓴 말','존재만으로도 충분히 빛나는 너야. 오늘도 사랑해.','')">
+        <div class="ex-item-head">존재에 대한 사랑</div>
+        <div class="ex-item-text">존재만으로도 충분히 빛나는 너야. 오늘도 사랑해.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('직접 쓴 말','실패해도 괜찮아. 다시 일어서는 네가 누구보다 멋져.','')">
+        <div class="ex-item-head">응원할 때</div>
+        <div class="ex-item-text">실패해도 괜찮아. 다시 일어서는 네가 누구보다 멋져.</div>
+      </div>
+
+      <div class="ex-cat-label">🎵 노래 가사</div>
+      <div class="ex-item" onclick="fillEx('노래 가사','눈, 코, 입 / 너의 숨결 너의 온기 / 이제는 느낄 수 없지만','태민. (2014). 눈, 코, 입 [Song]. On MOVE. SM엔터테인먼트.')">
+        <div class="ex-item-head">태민 — 눈, 코, 입</div>
+        <div class="ex-item-text">"눈, 코, 입 / 너의 숨결 너의 온기 / 이제는 느낄 수 없지만"</div>
+        <div class="ex-item-src">출처 예시: 태민. (2014). 눈, 코, 입 [Song]. On MOVE. SM엔터테인먼트.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('노래 가사','나는 나야 나는 나야 / 뭐가 어때서 / 그냥 나야','에픽하이. (2017). 나는 나야 [Song]. On 에픽하이 8집. B2M엔터테인먼트.')">
+        <div class="ex-item-head">에픽하이 — 나는 나야</div>
+        <div class="ex-item-text">"나는 나야 나는 나야 / 뭐가 어때서 / 그냥 나야"</div>
+        <div class="ex-item-src">출처 예시: 에픽하이. (2017). 나는 나야 [Song]. On 에픽하이 8집. B2M엔터테인먼트.</div>
+      </div>
+
+      <div class="ex-cat-label">🎬 영화 대사</div>
+      <div class="ex-item" onclick="fillEx('영화 대사','행복하기 위해 노력할 필요 없어. 그냥 네 자신이 되면 돼.','피트 닥터 (Director). (2024). 인사이드 아웃 2 [Film]. 픽사 애니메이션 스튜디오.')">
+        <div class="ex-item-head">인사이드 아웃 2</div>
+        <div class="ex-item-text">"행복하기 위해 노력할 필요 없어. 그냥 네 자신이 되면 돼."</div>
+        <div class="ex-item-src">출처 예시: 피트 닥터 (Director). (2024). 인사이드 아웃 2 [Film]. 픽사 애니메이션 스튜디오.</div>
+      </div>
+      <div class="ex-item" onclick="fillEx('영화 대사','과거는 바꿀 수 없어. 하지만 지금 이 순간은 네 것이야.','로저 알러스, 롭 민코프 (Directors). (1994). 라이온 킹 [Film]. 월트 디즈니 픽처스.')">
+        <div class="ex-item-head">라이온 킹</div>
+        <div class="ex-item-text">"과거는 바꿀 수 없어. 하지만 지금 이 순간은 네 것이야."</div>
+        <div class="ex-item-src">출처 예시: 로저 알러스, 롭 민코프 (Directors). (1994). 라이온 킹 [Film]. 월트 디즈니 픽처스.</div>
+      </div>
+
+      <div class="ex-hint">💡 클릭하면 아래 폼에 자동으로 입력됩니다. 원하시는 대로 수정해서 사용하세요.</div>
+    </div>
+  </div>
+
+  <div class="gform-wrap">
+    <div class="gf-field">
+      <label class="gf-label">학부모 성함<span class="gf-required">*</span></label>
+      <input class="gf-input" id="gf-parent" type="text" placeholder="홍길동">
+    </div>
+    <div class="gf-field">
+      <label class="gf-label">자녀 학년·반<span class="gf-required">*</span></label>
+      <select class="gf-select" id="gf-class">
+        <option value="">선택해주세요</option>
+        <option>1학년 1반</option><option>1학년 2반</option><option>1학년 3반</option>
+        <option>1학년 4반</option><option>1학년 5반</option><option>1학년 6반</option><option>1학년 7반</option>
+        <option>2학년 1반</option><option>2학년 2반</option><option>2학년 3반</option>
+        <option>2학년 4반</option><option>2학년 5반</option><option>2학년 6반</option><option>2학년 7반</option>
+        <option>3학년 1반</option><option>3학년 2반</option><option>3학년 3반</option>
+        <option>3학년 4반</option><option>3학년 5반</option><option>3학년 6반</option><option>3학년 7반</option>
+      </select>
+    </div>
+    <div class="gf-field">
+      <label class="gf-label">자녀 이름<span class="gf-required">*</span></label>
+      <input class="gf-input" id="gf-child" type="text" placeholder="홍학생">
+    </div>
+    <div class="gf-field">
+      <label class="gf-label">메시지 종류<span class="gf-required">*</span></label>
+      <div class="gf-radio-wrap" id="gf-type-wrap">
+        <label class="gf-radio"><input type="radio" name="gftype" value="책 속 문구" checked> 📖 책 속 문구</label>
+        <label class="gf-radio"><input type="radio" name="gftype" value="직접 쓴 말"> 💬 직접 쓴 말</label>
+        <label class="gf-radio"><input type="radio" name="gftype" value="노래 가사"> 🎵 노래 가사</label>
+        <label class="gf-radio"><input type="radio" name="gftype" value="영화 대사"> 🎬 영화 대사</label>
+        <label class="gf-radio"><input type="radio" name="gftype" value="기타"> ✏️ 기타</label>
+      </div>
+    </div>
+    <div class="gf-field">
+      <label class="gf-label">자녀에게 전하고 싶은 한마디<span class="gf-required">*</span></label>
+      <textarea class="gf-textarea" id="gf-msg" placeholder="소중한 문구를 입력해주세요 :)&#10;위 예시를 클릭하면 자동으로 입력됩니다."></textarea>
+    </div>
+    <div class="gf-field">
+      <label class="gf-label">출처 <span style="font-size:12px;color:var(--mu);font-weight:400">(직접 쓴 말·기타는 생략 가능)</span></label>
+      <input class="gf-input" id="gf-source" type="text" placeholder="예) 헤르만 헤세. (1919). 데미안. 민음사.">
+      <button class="apa-toggle-btn" type="button" onclick="toggleApa()">📐 출처 표기 방법 안내 보기/닫기</button>
+      <div class="apa-box" id="apa-box">
+        <div class="apa-row">
+          <div class="apa-type">📖 도서</div>
+          <div class="apa-format">저자명. (출판연도). 책제목. 출판사.</div>
+          <div class="apa-eg">예) 헤르만 헤세. (1919). 데미안. 민음사.</div>
+        </div>
+        <div class="apa-row">
+          <div class="apa-type">🎵 노래</div>
+          <div class="apa-format">가수명. (발매연도). 곡명 [Song]. On 앨범명. 음반사.</div>
+          <div class="apa-eg">예) 태민. (2014). 눈, 코, 입 [Song]. On MOVE. SM엔터테인먼트.</div>
+        </div>
+        <div class="apa-row">
+          <div class="apa-type">🎬 영화</div>
+          <div class="apa-format">감독명 (Director). (개봉연도). 영화제목 [Film]. 제작사.</div>
+          <div class="apa-eg">예) 피트 닥터 (Director). (2024). 인사이드 아웃 2 [Film]. 픽사 애니메이션 스튜디오.</div>
+        </div>
+        <div class="apa-row" style="margin-bottom:0">
+          <div class="apa-type">📌 그 외 자료</div>
+          <div class="apa-format">위 형식에 준하여 작성해 주세요.</div>
+          <div class="apa-eg">예) 작성자. (연도). 제목 [유형]. 출처.</div>
+        </div>
+      </div>
+      <div class="ac-notice">
+        ✏️ <strong>학문적 진실성 안내</strong><br>
+        다른 사람의 글·가사·대사를 인용할 때는 반드시 출처를 밝혀야 합니다.<br>
+        이는 작가와 창작자의 노력을 존중하고, 독서 문화를 지키는 첫 번째 약속입니다.<br>
+        <em style="color:#9A6800">직접 쓰신 말씀은 출처 없이 그대로 소중하게 전달됩니다.</em>
+      </div>
+    </div>
+    <div class="gf-field">
+      <label class="gf-label">공개 동의 여부<span class="gf-required">*</span></label>
+      <div style="background:#FFF8E1;border:1.5px solid #FFD54F;border-radius:var(--rad);padding:.6rem .85rem;margin-bottom:.6rem;font-size:13px;color:#7A5800;line-height:1.6">
+        📢 제출하신 메시지는 내용 검토 후 도서관 내 전시 또는 카드로 제작될 수 있습니다.<br>
+        아래에서 공개 범위를 직접 선택해 주세요.
+      </div>
+      <div class="gf-radio-wrap" id="gf-privacy-wrap">
+        <label class="gf-radio"><input type="radio" name="gfprivacy" value="전시·게시 공개 가능"> 🌸 전시·게시 공개 가능합니다</label>
+        <label class="gf-radio"><input type="radio" name="gfprivacy" value="자녀에게만 전달"> 🔒 우리 자녀에게만 전달해 주세요 (비공개)</label>
+      </div>
+    </div>
+    <button class="gf-submit" onclick="submitGform()">메시지 보내기 💌</button>
+    <div class="gf-success" id="gf-success">
+      <strong style="color:var(--g);font-size:15px">✅ 소중한 메시지가 접수됐어요!</strong><br>
+      <span style="font-size:13px;color:var(--mu)">5월 12일부터 도서관 내 게시 및 카드로 제작하여 자녀에게 전달됩니다.<br>가정의 달, 담쟁이글숲과 함께해 주셔서 감사합니다 🌿</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- 세계 인사말 -->
+<section class="sec" id="greetings" style="background:var(--sur)">
+  <div class="sec-label">행사 ② 세계 인사말</div>
+  <div class="sec-title">다름이 틀림이 아닐 때 🌍</div>
+  <div class="sec-desc">세계 여러 나라의 인사말을 눈으로 읽고, 도서관에서 직접 써보세요. 아는 나라의 인사말이 있다면 아래에서 직접 카드를 만들어볼 수도 있어요!</div>
+  <div class="gr-grid" id="gr-grid"></div>
+  <div class="gr-note">
+    <div class="gr-note-title">✏ 따라쓰기 활동 안내</div>
+    <div class="gr-note-body">도서관 비치된 필사지에 마음에 드는 인사말을 직접 써주세요.<br>완성된 카드는 도서관 <strong>인사말 세계지도 전시</strong>에 부착됩니다.<br>5월 15일까지 모든 카드가 모이면 세계지도가 완성돼요!</div>
+
+  <!-- 직접 카드 만들기 -->
+  <div class="gc-wrap">
+    <div class="gc-title">✏️ 내가 아는 나라 인사말 써보기</div>
+    <div class="gc-desc">아는 나라의 인사말을 아래에 입력하면 나만의 카드가 만들어져요!</div>
+    <div class="gc-row">
+      <input class="gc-inp" id="gc-country" placeholder="나라 이름" maxlength="12">
+      <input class="gc-inp" id="gc-lang" placeholder="언어 (선택)" maxlength="10">
+      <input class="gc-inp" id="gc-text" placeholder="인사말" maxlength="20">
+      <input class="gc-inp" id="gc-script" placeholder="문자 종류 (선택)" maxlength="10">
+      <button class="gc-add" onclick="addCustomGreeting()">카드 만들기 ✨</button>
+    </div>
+    <div class="gc-grid" id="gc-grid"></div>
+  </div>
+
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="footer-title">📚 소장도서 대출 가능 여부 확인하기</div>
+  <div class="footer-desc">사대부중도서관 담쟁이글숲 소장 도서 실시간 검색 및 대출 현황 확인</div>
+  <div style="background:rgba(255,255,255,.12);border-radius:var(--rad);padding:.8rem 1rem;margin-bottom:.75rem;border:1px solid rgba(255,255,255,.2)">
+    <div style="font-size:14px;font-weight:700;color:#FFE84D;margin-bottom:4px">📌 독서로 이용 전 꼭 확인하세요!</div>
+    <div style="font-size:13px;color:rgba(255,255,255,.88);line-height:1.75">
+      독서로 서비스 이용을 위해 <strong style="color:#fff">사전 회원가입</strong>이 필요합니다.<br>
+      로그인 후 학교 도서관을 연결해야 소장 도서 대출 현황을 확인할 수 있어요.<br>
+      <span style="color:#FFE84D">🔑 학교도서관 인증번호는 도서관으로 문의 바랍니다.</span>
+    </div>
+  </div>
+  <div class="footer-link" onclick="openLink('https://read365.edunet.net/PureScreen/SchoolSearch?schoolName=경북대학교사범대학부설중학교&provCode=D10&neisCode=A000003491')">🔍 경북대사범대학부설중학교 도서관 바로가기 ↗</div>
+  <div class="footer-copy">사대부중도서관 담쟁이글숲 · 2026년 1차 신간도서 안내</div>
+</footer>
+
+<script>
+const BOOKS=[{"no": 1, "t": "파이썬만으로 시작하는 1인 게임 개발", "a": "히로세 츠요시", "p": "영진.com(영진닷컴)", "pr": 22000, "i": "9788931481693", "c": "교사신청", "f": "게임 프로그래밍", "s": "디자인", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788931481693"}, {"no": 2, "t": "딥페이크부터 AI 저작권까지, 과학을 말해요", "a": "양서윤", "p": "개암나무", "pr": 13500, "i": "9788968308406", "c": "교과추천도서", "f": "과학 일반", "s": "디자인", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788968308406"}, {"no": 3, "t": "미디어 리터러시, 세상을 읽는 힘", "a": "강용철.정형근", "p": "샘터사", "pr": 12000, "i": "9788946422131", "c": "교과추천도서", "f": "교양 인문학", "s": "언어와문학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788946422131"}, {"no": 4, "t": "어느날 미래가 도착했다", "a": "우숙영", "p": "창비", "pr": 18000, "i": "9788936480837", "c": "학생, 학부모신청", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936480837"}, {"no": 5, "t": "절멸", "a": "정혜윤 외", "p": "워크룸프레스", "pr": 17000, "i": "9791189356576", "c": "학생, 학부모신청", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189356576"}, {"no": 6, "t": "모두의 도서관", "a": "강은주 외", "p": "여행자의책", "pr": 18000, "i": "9791198611963", "c": "추천 및 신간", "f": "서지/문헌/도서관", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198611963"}, {"no": 7, "t": "AI와 스포츠 전략", "a": "국창민", "p": "커뮤니케이션북스", "pr": 12000, "i": "9791143019363", "c": "교과추천도서", "f": "인공지능", "s": "체육과보건", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791143019363"}, {"no": 8, "t": "혼자 공부하는 바이브 코딩 with 클로드 코드", "a": "조태호", "p": "한빛미디어", "pr": 30000, "i": "9791199529847", "c": "학생, 학부모신청", "f": "인공지능", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199529847"}, {"no": 9, "t": "집중력 죽이기", "a": "마크 티흐헬라르.오스카르 더 보스", "p": "서삼독", "pr": 19000, "i": "9791193904725", "c": "학생, 학부모신청", "f": "창의적사고/두뇌계발", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193904725"}, {"no": 10, "t": "1일 1주제 9분 만에 끝내는 디지털 리터러시", "a": "윤혁", "p": "초록비책공방", "pr": 18500, "i": "9791124126165", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126165"}, {"no": 11, "t": "1일 1주제 9분 만에 끝내는 인공지능", "a": "김동은", "p": "초록비책공방", "pr": 18500, "i": "9791124126059", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126059"}, {"no": 12, "t": "십 대를 위한 영화 속 빅데이터 인문학", "a": "김영진", "p": "팜파스", "pr": 13800, "i": "9791170263777", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "수학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170263777"}, {"no": 13, "t": "‘좋아요’가 왜 안 좋아?", "a": "구본권", "p": "나무를심는사람들", "pr": 14000, "i": "9791193156094", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193156094"}, {"no": 14, "t": "AI에게 건강을 맡겨도 될까요?", "a": "김준혁", "p": "휴머니스트", "pr": 16700, "i": "9791170873952", "c": "학생, 학부모신청", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170873952"}, {"no": 15, "t": "AI한테 내 생각을 맡겨도 될까?", "a": "박승억", "p": "나무를심는사람들", "pr": 15000, "i": "9791193156384", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193156384"}, {"no": 16, "t": "공부가 되는 뉴스 독해", "a": "뉴스쿨", "p": "길벗스쿨", "pr": 22000, "i": "9791174670250", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791174670250"}, {"no": 17, "t": "누가 내 시간을 훔쳐 갔지?", "a": "김지윤", "p": "우리학교", "pr": 15000, "i": "9791167553485", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553485"}, {"no": 18, "t": "알고 있니? 알고리즘", "a": "소이언", "p": "우리학교", "pr": 14000, "i": "9791167550521", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "디자인", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167550521"}, {"no": 19, "t": "좋아요? 그럼 팔로우!", "a": "귀르반 크리스타나자야", "p": "탐", "pr": 18000, "i": "9788964965313", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964965313"}, {"no": 20, "t": "이게 되네? 제미나이 완전 미친 활용법 81제", "a": "오힘찬", "p": "골든래빗(주)", "pr": 24000, "i": "9791194383796", "c": "추천 및 신간", "f": "초보자를 위한 컴퓨터 책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194383796"}, {"no": 21, "t": "수행 만점 독서법", "a": "김미진 외", "p": "성림원북스", "pr": 19800, "i": "9791124072042", "c": "추천 및 신간", "f": "학습법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124072042"}, {"no": 22, "t": "다크 심리학", "a": "다크 사이드 프로젝트", "p": "어센딩", "pr": 21900, "i": "9791198754080", "c": "교사신청", "f": "교양 심리학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198754080"}, {"no": 23, "t": "적절한 좌절", "a": "김경일.류한욱", "p": "저녁달", "pr": 20000, "i": "9791189217518", "c": "교사신청", "f": "교양 심리학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189217518"}, {"no": 24, "t": "고유지능", "a": "앵거스 플레처", "p": "인플루엔셜(주)", "pr": 21000, "i": "9791168346", "c": "교사신청", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168346"}, {"no": 25, "t": "니체의 차라투스트라는 이렇게 말했다", "a": "한상원", "p": "EBS BOOKS", "pr": 13000, "i": "9788954799485", "c": "추천 및 신간", "f": "교양 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954799485"}, {"no": 26, "t": "쇼펜하우어의 의지와 표상으로서의 세계", "a": "박은미", "p": "EBS BOOKS", "pr": 13000, "i": "9788954761925", "c": "추천 및 신간", "f": "교양 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954761925"}, {"no": 27, "t": "아리스토텔레스의 니코마코스 윤리학", "a": "유재민", "p": "EBS BOOKS", "pr": 13000, "i": "9788954761932", "c": "추천 및 신간", "f": "교양 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954761932"}, {"no": 28, "t": "칸트의 순수이성비판", "a": "강지은", "p": "EBS BOOKS", "pr": 13000, "i": "9788954777018", "c": "추천 및 신간", "f": "교양 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954777018"}, {"no": 29, "t": "행복 철학", "a": "이충진", "p": "이학사", "pr": 13500, "i": "9788961473781", "c": "교과추천도서", "f": "교양 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788961473781"}, {"no": 30, "t": "헤겔의 정신현상학", "a": "이병창", "p": "EBS BOOKS", "pr": 13000, "i": "9788954772556", "c": "추천 및 신간", "f": "교양 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954772556"}, {"no": 31, "t": "인류 멸종, 생각보다 괜찮은 아이디어", "a": "토드 메이", "p": "위즈덤하우스", "pr": 17000, "i": "9791171715114", "c": "추천 및 신간", "f": "인문 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171715114"}, {"no": 32, "t": "조용한 회복", "a": "박재연", "p": "한빛라이프", "pr": 22000, "i": "9791194725206", "c": "추천 및 신간", "f": "인문 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194725206"}, {"no": 33, "t": "발상의 회로", "a": "나카가와 료", "p": "지니의서재", "pr": 17800, "i": "9791198621504", "c": "추천 및 신간", "f": "창의적사고/두뇌계발", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198621504"}, {"no": 34, "t": "아, 이게 철학이구나!", "a": "지하늘", "p": "위즈덤하우스", "pr": 18500, "i": "9791175910423", "c": "추천 및 신간", "f": "철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791175910423"}, {"no": 35, "t": "열세 살부터 시작하는 철학 사고 수업", "a": "호시 도모히로", "p": "봄나무", "pr": 16800, "i": "9791156132264", "c": "추천 및 신간", "f": "철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156132264"}, {"no": 36, "t": "질문으로 답을 찾는 인공지능 윤리 수업", "a": "박형빈", "p": "한언출판사", "pr": 21000, "i": "9788955969474", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "디자인", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788955969474"}, {"no": 37, "t": "AI 시대, 십 대를 위한 논어", "a": "최태규", "p": "미디어숲", "pr": 18800, "i": "9791158742591", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "수학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158742591"}, {"no": 38, "t": "까칠하고 예민한 사춘기를 위한 감정을 돌보는 방법", "a": "하수정", "p": "마음경작소", "pr": 15000, "i": "9791197212338", "c": "학생, 학부모신청", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197212338"}, {"no": 39, "t": "왜 중독에 빠지는 걸까?", "a": "오승현", "p": "뜨인돌", "pr": 15000, "i": "9791175990005", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791175990005"}, {"no": 40, "t": "질문으로 답을 찾는 인공지능 시대 철학 수업", "a": "박시몽", "p": "한언출판사", "pr": 21000, "i": "9788955969511", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "디자인", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788955969511"}, {"no": 41, "t": "철학 인터뷰, 그분이 알고 싶다", "a": "서정욱", "p": "다른", "pr": 16000, "i": "9791156337249", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156337249"}, {"no": 42, "t": "청소년 중독, 왜 하지 말라고 해요?", "a": "김계현", "p": "천개의바람", "pr": 14000, "i": "9791165736828", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165736828"}, {"no": 43, "t": "자라느라 애쓰는 10대를 위한 마음챙김", "a": "심윤정", "p": "휴머니스트", "pr": 16700, "i": "9791170874041", "c": "교사신청", "f": "청소년 자기계발", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170874041"}, {"no": 44, "t": "열두 달 철학 상담소", "a": "이진민", "p": "북트리거", "pr": 17000, "i": "9791193378397", "c": "추천 및 신간", "f": "청소년 철학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378397"}, {"no": 45, "t": "중1의 세계", "a": "고이 외", "p": "마음이음", "pr": 14500, "i": "9791194494041", "c": "추천 및 신간", "f": "청소년의 사회생활", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194494041"}, {"no": 46, "t": "드디어 만나는 중국 신화", "a": "황더하이 외", "p": "현대지성", "pr": 19900, "i": "9791139729771", "c": "추천 및 신간", "f": "동양의 신화와 전설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139729771"}, {"no": 47, "t": "부처님 말씀대로 살아보니", "a": "토니 페르난도", "p": "윌마", "pr": 18900, "i": "9791199496651", "c": "추천 및 신간", "f": "성공학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199496651"}, {"no": 48, "t": "드디어 만나는 아즈텍 신화", "a": "카밀라 타운센드", "p": "현대지성", "pr": 16900, "i": "9791139716566", "c": "추천 및 신간", "f": "세계의 신화와 전설 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139716566"}, {"no": 49, "t": "이 정도만 알면 되는 경제학 만화", "a": "김상현", "p": "빅피시", "pr": 17500, "i": "9791199401068", "c": "학생, 학부모신청", "f": "경제이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199401068"}, {"no": 50, "t": "최소한의 노벨 경제학상", "a": "김나영", "p": "가나출판사", "pr": 17800, "i": "9791168092280", "c": "교사신청", "f": "경제이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168092280"}, {"no": 51, "t": "START-UP 문해력 수업", "a": "안연규", "p": "휴머니스트", "pr": 15000, "i": "9791170872375", "c": "교사신청", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170872375"}, {"no": 52, "t": "과학페어(과학토론)대회", "a": "박진국", "p": "리얼슾(REALSOUP)", "pr": 18000, "i": "9791197779312", "c": "추천 및 신간", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197779312"}, {"no": 53, "t": "과학페어(과학토론)대회 2", "a": "박진국", "p": "리얼슾(REALSOUP)", "pr": 20000, "i": "9791197779350", "c": "추천 및 신간", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197779350"}, {"no": 54, "t": "국어 수업에 쉽게 적용하는 개념기반 탐구학습", "a": "배현진.우경란.유상은", "p": "휴머니스트", "pr": 17000, "i": "9791170874034", "c": "교사신청", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170874034"}, {"no": 55, "t": "모든 교실은 신경다양성 교실이다", "a": "김명희", "p": "새로온봄", "pr": 19200, "i": "9791198741363", "c": "교사신청", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198741363"}, {"no": 56, "t": "무엇이 우리 학생들을 좋은 독자로 만드는가", "a": "피터 애플러백", "p": "사회평론아카데미", "pr": 18000, "i": "9791167072276", "c": "교사신청", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167072276"}, {"no": 57, "t": "평생 써먹는 놀이 수업 280", "a": "정다해", "p": "문예춘추사", "pr": 22000, "i": "9788976045713", "c": "추천 및 신간", "f": "교육 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788976045713"}, {"no": 58, "t": "Dr. 아톰과 함께하는 주제 맞춤 탐구보고서 쓰기", "a": "박규상", "p": "더디퍼런스", "pr": 17800, "i": "9791161255156", "c": "추천 및 신간", "f": "기타", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161255156"}, {"no": 59, "t": "멈출 수 없는 우리 1", "a": "유발 하라리", "p": "주니어김영사", "pr": 14800, "i": "9788934958987", "c": "추천 및 신간", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788934958987"}, {"no": 60, "t": "멈출 수 없는 우리 2", "a": "유발 하라리", "p": "주니어김영사", "pr": 14800, "i": "9788934945864", "c": "추천 및 신간", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788934945864"}, {"no": 61, "t": "멈출 수 없는 우리 3", "a": "유발 하라리", "p": "주니어김영사", "pr": 14800, "i": "9791194875", "c": "추천 및 신간", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194875"}, {"no": 62, "t": "비문학이 읽히는 최소한의 배경지식", "a": "이다희", "p": "위즈덤하우스", "pr": 22000, "i": "9791171715640", "c": "추천 및 신간", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171715640"}, {"no": 63, "t": "생각하지 않는 죄", "a": "이모령", "p": "아름다운사람들", "pr": 14800, "i": "9788965138174", "c": "추천 및 신간", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965138174"}, {"no": 64, "t": "우리 학교가 사라진대요!", "a": "예영", "p": "마음이음", "pr": 14500, "i": "9791189010089", "c": "추천 및 신간", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189010089"}, {"no": 65, "t": "인구절벽 너머의 미래", "a": "이현출", "p": "IMK", "pr": 16000, "i": "9788940649909", "c": "교과추천도서", "f": "사회문제 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788940649909"}, {"no": 66, "t": "커뮤니티에 입장하셨습니다", "a": "권성민", "p": "돌고래", "pr": 19500, "i": "9791198850263", "c": "추천 및 신간", "f": "사회문제 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198850263"}, {"no": 67, "t": "세계미래보고서 2026-2036", "a": "박영숙.제롬 글렌", "p": "교보문고(단행본)", "pr": 20000, "i": "9791170613329", "c": "교과추천도서", "f": "세계 경제사/경제전망", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170613329"}, {"no": 68, "t": "마땅히 누려야 할 인권 탐구생활", "a": "이기규", "p": "파란자전거", "pr": 12900, "i": "9791188609208", "c": "교과추천도서", "f": "인권/평등", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188609208"}, {"no": 69, "t": "지구촌 아름다운 거래 탐구생활", "a": "한수정", "p": "파란자전거", "pr": 13900, "i": "9791186075555", "c": "교과추천도서", "f": "인권/평등", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791186075555"}, {"no": 70, "t": "처음 시작하는 너와 나의 인권 수업", "a": "홍명진", "p": "어린이나무생각", "pr": 14800, "i": "9791162183465", "c": "교과추천도서", "f": "인권/평등", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162183465"}, {"no": 71, "t": "10대를 위한 불안 세대", "a": "조너선 하이트.캐서린 프라이스", "p": "웅진지식하우스", "pr": 19000, "i": "9788901299471", "c": "교사신청", "f": "자기계발", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788901299471"}, {"no": 72, "t": "행복하냐는 질문에 대답할 수 없다면", "a": "알랭 드 보통.인생학교", "p": "미래엔아이세움", "pr": 15000, "i": "9791168411371", "c": "교과추천도서", "f": "자기계발", "s": "개인과사회", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168411371"}, {"no": 73, "t": "이 일로 돈을 벌었다고요?", "a": "이정환.김은정", "p": "마음이음", "pr": 15000, "i": "9791194494171", "c": "추천 및 신간", "f": "정치/경제/법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194494171"}, {"no": 74, "t": "중3을 위한 고등학교 사용 설명서", "a": "이승우", "p": "좋은습관연구소", "pr": 20000, "i": "9791193639818", "c": "학생, 학부모신청", "f": "진로/진학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193639818"}, {"no": 75, "t": "국제거래와 환율 쫌 아는 10대", "a": "석혜원", "p": "풀빛", "pr": 13000, "i": "9791161727424", "c": "추천 및 신간", "f": "청소년 경제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161727424"}, {"no": 76, "t": "나의 첫 금융 공부", "a": "이완배", "p": "북트리거", "pr": 17000, "i": "9791193378519", "c": "추천 및 신간", "f": "청소년 경제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378519"}, {"no": 77, "t": "오늘부터 머니 챌린지!", "a": "김나영", "p": "휴머니스트", "pr": 16700, "i": "9791170873518", "c": "교과추천도서", "f": "청소년 경제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170873518"}, {"no": 78, "t": "청소년을 위한 돈이 되는 경제 교과서", "a": "신동국", "p": "처음북스", "pr": 17000, "i": "9791170222644", "c": "교과추천도서", "f": "청소년 경제", "s": "개인과사회", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170222644"}, {"no": 79, "t": "최소한의 행동경제학", "a": "김나영", "p": "가나출판사", "pr": 16800, "i": "9791168091672", "c": "교사신청", "f": "청소년 경제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168091672"}, {"no": 80, "t": "1일 1주제 9분 만에 끝내는 도덕과 윤리", "a": "김하원", "p": "초록비책공방", "pr": 18500, "i": "9791124126141", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126141"}, {"no": 81, "t": "1일 1주제 9분 만에 끝내는 통합사회", "a": "김지수", "p": "초록비책공방", "pr": 18500, "i": "9791124126110", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126110"}, {"no": 82, "t": "5층 삼촌", "a": "박우", "p": "너머학교", "pr": 17000, "i": "9791192894720", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192894720"}, {"no": 83, "t": "건드리지 마! 젠더 갈등", "a": "정정희", "p": "천개의바람", "pr": 14000, "i": "9791165736804", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165736804"}, {"no": 84, "t": "골목에서 배우는 인권", "a": "정석 외", "p": "철수와영희", "pr": 17000, "i": "9791171530328", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530328"}, {"no": 85, "t": "교과서 속 인물에게 배우는 최소한의 개념 수업", "a": "박성경 외", "p": "미디어숲", "pr": 18800, "i": "9791158749224", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158749224"}, {"no": 86, "t": "교양 한 그릇", "a": "박찬일", "p": "북트리거", "pr": 16800, "i": "9791193378601", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378601"}, {"no": 87, "t": "달력으로 배우는 인권 수업", "a": "인권재단 사람", "p": "주니어태학", "pr": 17500, "i": "9791168103146", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168103146"}, {"no": 88, "t": "닭장 속에는 치킨이", "a": "기획집단 MOIM", "p": "그림씨", "pr": 16800, "i": "9791189231675", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189231675"}, {"no": 89, "t": "미래 세대를 위한 민주시민 이야기", "a": "정주진", "p": "철수와영희", "pr": 17000, "i": "9791171530335", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530335"}, {"no": 90, "t": "미래 세대를 위한 법 이야기", "a": "이지현", "p": "철수와영희", "pr": 15000, "i": "9791171530090", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530090"}, {"no": 91, "t": "미래 세대를 위한 세계시민 이야기", "a": "정주진", "p": "철수와영희", "pr": 15000, "i": "9791171530236", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530236"}, {"no": 92, "t": "민주주의가 왜 좋을까?", "a": "최연혁", "p": "나무를심는사람들", "pr": 13000, "i": "9791186361887", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791186361887"}, {"no": 93, "t": "생각이 많은 10대를 위한 국제 관계", "a": "박창섭", "p": "나무생각", "pr": 16800, "i": "9791162183854", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162183854"}, {"no": 94, "t": "세상에 대하여 우리가 더 잘 알아야 할 교양 : 인구 문제, 숫자일까, 인권일까?", "a": "필립 스틸", "p": "내인생의책", "pr": 12000, "i": "9791157234295", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791157234295"}, {"no": 95, "t": "세상에 대하여 우리가 더 잘 알아야 할 교양 : 인구와 경제, 인구가 많아야 경제에 좋을까?", "a": "정민규", "p": "내인생의책", "pr": 15000, "i": "9791157234738", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791157234738"}, {"no": 96, "t": "세상은 질문에서 시작된다", "a": "박경서", "p": "생각을말하다", "pr": 15000, "i": "9791196260859", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196260859"}, {"no": 97, "t": "세상의 법은 누구 편인가요?", "a": "조덕상", "p": "404(사공사)", "pr": 15000, "i": "9791193947432", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193947432"}, {"no": 98, "t": "인권, 세계를 이해하다", "a": "김누리 외", "p": "철수와영희", "pr": 14000, "i": "9791188215", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188215"}, {"no": 99, "t": "존엄, 자유, 평등, 연대로 만나는 인권 교과서", "a": "류은숙", "p": "낮은산", "pr": 14000, "i": "9791155251577", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251577"}, {"no": 100, "t": "지상 최대의 감옥", "a": "미니(안영민)", "p": "내일을여는책", "pr": 17000, "i": "9788977468597", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788977468597"}, {"no": 101, "t": "진실 탐정이 되자", "a": "팀 하포드", "p": "롤러코스터", "pr": 15800, "i": "9791191311624", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191311624"}, {"no": 102, "t": "나는 어떤 사람이 되고 싶었을까?", "a": "이아진", "p": "체인지업", "pr": 18800, "i": "9791191378764", "c": "교과추천도서", "f": "청소년 자기계발", "s": "진로", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191378764"}, {"no": 103, "t": "청소년을 위한 정의론", "a": "강영계", "p": "해냄", "pr": 16800, "i": "9788965743071", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "개인과사회", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965743071"}, {"no": 104, "t": "하이브리드 이과생", "a": "최규희", "p": "KMD(도서출판)", "pr": 16000, "i": "9788996733539", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "진로", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788996733539"}, {"no": 105, "t": "10대를 위한 AI 리더 젠슨 황 이야기", "a": "장린팡.후팡팡", "p": "다산북스", "pr": 17000, "i": "9791130677132", "c": "학생, 학부모신청", "f": "청소년 자기계발", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130677132"}, {"no": 106, "t": "꿈을 찾아주는 내비게이터", "a": "정효경", "p": "마리북스", "pr": 13000, "i": "9788994011264", "c": "교과추천도서", "f": "청소년 자기계발", "s": "진로", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788994011264"}, {"no": 107, "t": "게임에서 배우는 학습 원리", "a": "제임스 폴 지", "p": "사회평론아카데미", "pr": 23000, "i": "9791167071644", "c": "교사신청", "f": "학교/학습법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167071644"}, {"no": 108, "t": "교과세특 추천 도서 300 : 계열별", "a": "한승배 외", "p": "캠퍼스멘토", "pr": 29800, "i": "9791192382326", "c": "추천 및 신간", "f": "학습법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192382326"}, {"no": 109, "t": "교과세특 추천 도서 300 : 교과별", "a": "한승배 외", "p": "캠퍼스멘토", "pr": 29800, "i": "9791192382333", "c": "추천 및 신간", "f": "학습법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192382333"}, {"no": 110, "t": "과자 사면 과학 드립니다", "a": "정윤선", "p": "풀빛", "pr": 15000, "i": "9791194636212", "c": "학생, 학부모신청", "f": "과학 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194636212"}, {"no": 111, "t": "다있소 과학 1", "a": "윤자영", "p": "다른어린이", "pr": 14500, "i": "9791156337560", "c": "추천 및 신간", "f": "과학 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156337560"}, {"no": 112, "t": "물질의 세계", "a": "에드 콘웨이", "p": "인플루엔셜(주)", "pr": 29800, "i": "9791168341746", "c": "교과추천도서", "f": "교양 인문학", "s": "과학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168341746"}, {"no": 113, "t": "과학하는 마음", "a": "임지한", "p": "제철소", "pr": 18000, "i": "9791188343874", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188343874"}, {"no": 114, "t": "궤도의 다시 만난 과학자", "a": "궤도", "p": "영진.com(영진닷컴)", "pr": 19800, "i": "9788931480788", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788931480788"}, {"no": 115, "t": "눈이 트이는 수학 센스", "a": "하나키 료", "p": "시그마북스", "pr": 18000, "i": "9791168624610", "c": "교과추천도서", "f": "기초과학/교양과학", "s": "수학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168624610"}, {"no": 116, "t": "댕댕이와 함께 과학", "a": "김성환", "p": "지노", "pr": 18000, "i": "9791193878231", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193878231"}, {"no": 117, "t": "만화로 보는 과학을 보다", "a": "김영현 글/그림", "p": "책과삶", "pr": 19800, "i": "9791199327856", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199327856"}, {"no": 118, "t": "어떻게 과학을 사랑하지 않을 수 있겠어", "a": "이윤종", "p": "어크로스", "pr": 17000, "i": "9791167741851", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167741851"}, {"no": 119, "t": "엉뚱한 과학책", "a": "김진우(은잡지)", "p": "빅피시", "pr": 18800, "i": "9791194033400", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194033400"}, {"no": 120, "t": "엘리멘탈", "a": "스티븐 포더", "p": "원더박스", "pr": 19000, "i": "9791192953663", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192953663"}, {"no": 121, "t": "우주 정복 만화, 지학툰", "a": "콜프", "p": "사회평론", "pr": 19800, "i": "9791162734001", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162734001"}, {"no": 122, "t": "이상한 과학책", "a": "김진우(은잡지)", "p": "빅피시", "pr": 18800, "i": "9791199491717", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199491717"}, {"no": 123, "t": "이토록 굉장한 세계", "a": "에드 용", "p": "어크로스", "pr": 29000, "i": "9791167740946", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167740946"}, {"no": 124, "t": "정재승의 과학 콘서트 (개정증보 2판)", "a": "정재승", "p": "어크로스", "pr": 18800, "i": "9791190030540", "c": "교과추천도서", "f": "기초과학/교양과학", "s": "과학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190030540"}, {"no": 125, "t": "중고등학교 생물", "a": "뉴턴프레스", "p": "아이뉴턴(뉴턴코리아)", "pr": 19500, "i": "9791161961293", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161961293"}, {"no": 126, "t": "화학자K의 추리 과학실", "a": "이광렬", "p": "블랙피쉬", "pr": 16800, "i": "9788968335365", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788968335365"}, {"no": 127, "t": "유네스코 동물권리선언 탐구생활", "a": "배병호.정종영", "p": "파란자전거", "pr": 13900, "i": "9791192308395", "c": "교과추천도서", "f": "사회 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192308395"}, {"no": 128, "t": "꿀벌이 멸종할까 봐", "a": "김영호", "p": "위즈덤하우스", "pr": 15000, "i": "9791171713035", "c": "추천 및 신간", "f": "생물과 생명", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171713035"}, {"no": 129, "t": "호기심 가득한 어린이를 위한 이토록 굉장한 세계", "a": "에드 용", "p": "어크로스주니어", "pr": 21000, "i": "9791167742452", "c": "추천 및 신간", "f": "생물과 생명", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167742452"}, {"no": 130, "t": "세상에서 가장 재미있는 32가지 생물학 이야기", "a": "이나가키 히데히로", "p": "사람과나무사이", "pr": 17000, "i": "9791188635917", "c": "교과추천도서", "f": "생물학", "s": "과학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188635917"}, {"no": 131, "t": "숫자 없는 수학책", "a": "마일로 베크먼", "p": "시공사", "pr": 16000, "i": "9791165797096", "c": "교과추천도서", "f": "수학 일반", "s": "수학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165797096"}, {"no": 132, "t": "읽자마자 원리와 공식이 보이는 수학 기호 사전", "a": "구로기 데쓰노리", "p": "보누스", "pr": 15800, "i": "9788964946343", "c": "추천 및 신간", "f": "수학 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964946343"}, {"no": 133, "t": "질문하는 십대를 위한 과학 탐구", "a": "김요섭", "p": "포르체", "pr": 24000, "i": "9791194634867", "c": "추천 및 신간", "f": "수학/과학 교육", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194634867"}, {"no": 134, "t": "보이지 않는 것들의 물리학", "a": "이순칠", "p": "해나무", "pr": 12000, "i": "9788956051819", "c": "교과추천도서", "f": "쉽게 배우는 물리학", "s": "과학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788956051819"}, {"no": 135, "t": "나의 수학 사춘기", "a": "차길영", "p": "교보문고(단행본)", "pr": 14000, "i": "9791159096457", "c": "추천 및 신간", "f": "쉽게 배우는 수학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791159096457"}, {"no": 136, "t": "수학의 발견 수학의 발명", "a": "앤 루니", "p": "베누스", "pr": 18000, "i": "9791198962607", "c": "교과추천도서", "f": "쉽게 배우는 수학", "s": "수학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198962607"}, {"no": 137, "t": "수학의 숲을 걷다", "a": "송용진", "p": "블랙피쉬", "pr": 19000, "i": "9788968334931", "c": "교과추천도서", "f": "쉽게 배우는 수학", "s": "수학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788968334931"}, {"no": 138, "t": "십대, 별과 우주를 사색해야 하는 이유", "a": "이광식", "p": "더숲", "pr": 16000, "i": "9788994418506", "c": "교과추천도서", "f": "쉽게 배우는 우주", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788994418506"}, {"no": 139, "t": "출출할 땐, 주기율표", "a": "곽재식", "p": "초사흘달", "pr": 20000, "i": "9791198965608", "c": "추천 및 신간", "f": "쉽게 배우는 화학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198965608"}, {"no": 140, "t": "하루 한 권, 일상 속 화학 반응", "a": "사이토 가쓰히로", "p": "드루", "pr": 16000, "i": "9791169836715", "c": "교과추천도서", "f": "쉽게 배우는 화학", "s": "과학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791169836715"}, {"no": 141, "t": "처음 만나는 양자의 세계", "a": "채은미", "p": "북플레저", "pr": 19000, "i": "9791193937990", "c": "추천 및 신간", "f": "양자역학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193937990"}, {"no": 142, "t": "우리는 모두 천문학자로 태어난다", "a": "지웅배(우주먼지)", "p": "오아시스", "pr": 21000, "i": "9791168273689", "c": "추천 및 신간", "f": "천문학/별자리/역법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168273689"}, {"no": 143, "t": "1일 1주제 9분 만에 끝내는 수학", "a": "박진환", "p": "초록비책공방", "pr": 18500, "i": "9791124126073", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126073"}, {"no": 144, "t": "1일 1주제 9분 만에 끝내는 통합과학", "a": "홍효빈", "p": "초록비책공방", "pr": 18500, "i": "9791124126127", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126127"}, {"no": 145, "t": "경이롭고 때론 징그러운 색깔 탐험", "a": "스티븐 와인버그", "p": "마음이음", "pr": 15000, "i": "9791194494034", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194494034"}, {"no": 146, "t": "과학 선생님이 읽어 주는 기후변화 보고서", "a": "김추령", "p": "서해문집", "pr": 16800, "i": "9791194413202", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194413202"}, {"no": 147, "t": "과학경진대회 수상자들의 공부법", "a": "미도리 신야", "p": "시프", "pr": 16800, "i": "9791192421360", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192421360"}, {"no": 148, "t": "과학이 지구를 구할 수 있나요?", "a": "목정민", "p": "서해문집", "pr": 14800, "i": "9791192988870", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192988870"}, {"no": 149, "t": "기발하고 신기한 수학의 재미 : 상편", "a": "천융밍", "p": "미디어숲", "pr": 17800, "i": "9791158741563", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158741563"}, {"no": 150, "t": "기발하고 신기한 수학의 재미 : 하편", "a": "천융밍", "p": "미디어숲", "pr": 17800, "i": "9791158741587", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158741587"}, {"no": 151, "t": "빅뱅에서 블랙홀까지", "a": "에르지", "p": "탐", "pr": 16000, "i": "9788964965269", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964965269"}, {"no": 152, "t": "십 대를 위한 사계절 수학 산책 이야기", "a": "염지현", "p": "팜파스", "pr": 15000, "i": "9791170266471", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "수학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170266471"}, {"no": 153, "t": "엎치락뒤치락 과학사", "a": "박재용", "p": "북트리거", "pr": 18000, "i": "9791193378427", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378427"}, {"no": 154, "t": "여기는 기상청! 내일의 날씨를 알려드립니다", "a": "박재용", "p": "청어람미디어", "pr": 15000, "i": "9791158712785", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158712785"}, {"no": 155, "t": "요즘 애들 수학", "a": "임청", "p": "초록비책공방", "pr": 16000, "i": "9791191266276", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "수학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191266276"}, {"no": 156, "t": "읽으면 수학천재가 되는 만화책 1", "a": "김지영", "p": "oldstairs(올드스테어즈)", "pr": 17000, "i": "9791170790518", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "수학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170790518"}, {"no": 157, "t": "읽으면 수학천재가 되는 만화책 2", "a": "김지영", "p": "oldstairs(올드스테어즈)", "pr": 17000, "i": "9791170790525", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "수학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170790525"}, {"no": 158, "t": "재밌어서 밤새 읽는 화학 이야기", "a": "사마키 다케오", "p": "더숲", "pr": 16000, "i": "9788994418513", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "과학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788994418513"}, {"no": 159, "t": "중학생의 유전학은 다르다", "a": "완두 프로젝트팀", "p": "블루무스", "pr": 17000, "i": "9791193407318", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193407318"}, {"no": 160, "t": "짜릿하게 팡팡 놀이공원 수학", "a": "염지현", "p": "휴머니스트", "pr": 16700, "i": "9791170874447", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170874447"}, {"no": 161, "t": "10대를 위한 뇌 과학 수업", "a": "안데르스 한센.맛스 벤블라드", "p": "판퍼블리싱", "pr": 15000, "i": "9791198898630", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198898630"}, {"no": 162, "t": "수학으로 세상을 널리 이롭게 하라", "a": "안나미", "p": "자음과모음", "pr": 16000, "i": "9788954452366", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954452366"}, {"no": 163, "t": "통계로 보는 세상", "a": "김창훈", "p": "갈라북스", "pr": 14000, "i": "9791186518649", "c": "교과추천도서", "f": "현대사회문화론", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791186518649"}, {"no": 164, "t": "확률 퍼즐", "a": "뉴턴프레스", "p": "아이뉴턴(뉴턴코리아)", "pr": 18000, "i": "9791161960944", "c": "교과추천도서", "f": "확률/통계학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161960944"}, {"no": 165, "t": "도파민 가족", "a": "이은경", "p": "흐름출판", "pr": 18000, "i": "9788965967576", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965967576"}, {"no": 166, "t": "수상한생선의 진짜로 해부하는 과학책 1", "a": "김준연", "p": "arte(아르테)", "pr": 19800, "i": "9788950945015", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950945015"}, {"no": 167, "t": "수상한생선의 진짜로 해부하는 과학책 2", "a": "김준연", "p": "arte(아르테)", "pr": 19800, "i": "9788950945527", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950945527"}, {"no": 168, "t": "탄소라는 세계", "a": "폴 호컨", "p": "웅진지식하우스", "pr": 19800, "i": "9788901296890", "c": "추천 및 신간", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788901296890"}, {"no": 169, "t": "소녀들을 위한 내 몸 안내서", "a": "소냐 르네 테일러", "p": "휴머니스트", "pr": 14000, "i": "9791160802559", "c": "교과추천도서", "f": "성(性) 이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791160802559"}, {"no": 170, "t": "소비 해방일지", "a": "애슐리 파이퍼", "p": "알에이치코리아(RHK)", "pr": 20000, "i": "9788925569598", "c": "교과추천도서", "f": "성공학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788925569598"}, {"no": 171, "t": "정재승의 인간 탐구 보고서 15 : 소용돌이치는 사춘기의 뇌 (특대호)", "a": "정재승 기획", "p": "아울북", "pr": 16800, "i": "9788950969301", "c": "학생, 학부모신청", "f": "우리 몸", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950969301"}, {"no": 172, "t": "가장 완벽한 ADHD 양육 가이드", "a": "박소영 외", "p": "카시오페아", "pr": 20000, "i": "9791168273863", "c": "교사신청", "f": "육아법/육아 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168273863"}, {"no": 173, "t": "인간이 만든 위대한 속임수 식품첨가물", "a": "아베 쓰카사", "p": "국일미디어(국일출판사)", "pr": 13000, "i": "9788974259266", "c": "교과추천도서", "f": "음식과 건강", "s": "디자인", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788974259266"}, {"no": 175, "t": "쓰레기", "a": "브라이언 딜", "p": "플레이타임", "pr": 12000, "i": "9791196166014", "c": "교과추천도서", "f": "인문 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196166014"}, {"no": 176, "t": "드디어 만나는 해부학 수업", "a": "케빈 랭포드", "p": "현대지성", "pr": 19900, "i": "9791139724936", "c": "추천 및 신간", "f": "인체의 이해", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139724936"}, {"no": 177, "t": "지구촌 슬픈 갈등 탐구생활", "a": "이두현 외", "p": "파란자전거", "pr": 13900, "i": "9791188609529", "c": "추천 및 신간", "f": "전쟁/평화 이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188609529"}, {"no": 178, "t": "스님의 청소법", "a": "마스노 슌묘", "p": "유노책주", "pr": 18000, "i": "9791171831395", "c": "추천 및 신간", "f": "정리/심플라이프", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171831395"}, {"no": 179, "t": "101 에코과학", "a": "정종우", "p": "푸른들녘", "pr": 19000, "i": "9791176100168", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791176100168"}, {"no": 180, "t": "곤충이 미래 식량이라고?", "a": "윤자영", "p": "다른", "pr": 15000, "i": "9791156336570", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156336570"}, {"no": 181, "t": "기침 뚝 코가 뻥! 약국 과학", "a": "이고은", "p": "휴머니스트", "pr": 16700, "i": "9791170873716", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170873716"}, {"no": 182, "t": "꼬리에 꼬리를 무는 신소재 이야기", "a": "홍완식", "p": "주니어태학", "pr": 18000, "i": "9791168103696", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168103696"}, {"no": 183, "t": "사춘기는 처음이라", "a": "이광렬", "p": "클랩북스", "pr": 19000, "i": "9791193941607", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193941607"}, {"no": 184, "t": "소용돌이치는 사춘기의 뇌", "a": "양은우", "p": "다림", "pr": 14000, "i": "9788961772976", "c": "학생, 학부모신청", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788961772976"}, {"no": 185, "t": "십 대를 위한 영화 속 로봇인문학 여행", "a": "전승민", "p": "팜파스", "pr": 13800, "i": "9791170263746", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "수학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170263746"}, {"no": 186, "t": "어쩌다 기후 악당", "a": "권승문", "p": "생각학교", "pr": 15000, "i": "9791193811344", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193811344"}, {"no": 187, "t": "지구가 권리를 가지는 날에는", "a": "가치를꿈꾸는과학교사모임", "p": "우리학교", "pr": 15000, "i": "9791167553447", "c": "추천 및 신간", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553447"}, {"no": 188, "t": "진짜 호르몬 때문일까?", "a": "박승준", "p": "다른", "pr": 15000, "i": "9791156336983", "c": "학생, 학부모신청", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156336983"}, {"no": 189, "t": "탄소 중립 쫌 아는 10대", "a": "오승현", "p": "풀빛", "pr": 13000, "i": "9791161729145", "c": "교과추천도서", "f": "청소년 수학/과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161729145"}, {"no": 190, "t": "내가 에너지를 생각하는 이유", "a": "이필렬 외", "p": "나무를심는사람들", "pr": 15000, "i": "9791193156063", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193156063"}, {"no": 191, "t": "내일은 못 먹을지도 몰라", "a": "시어도어 C. 듀머스", "p": "롤러코스터", "pr": 14500, "i": "9791191311044", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191311044"}, {"no": 192, "t": "미래 세대를 위한 건축과 국가 권력 이야기", "a": "서윤영", "p": "철수와영희", "pr": 15000, "i": "9791171530045", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530045"}, {"no": 193, "t": "비만이 사회문제라고요?", "a": "박승준", "p": "초록서재", "pr": 14500, "i": "9791197456381", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197456381"}, {"no": 194, "t": "사춘기 교실에서 여학생과 남학생이 사는 법", "a": "은이정", "p": "생각학교", "pr": 14000, "i": "9791191360936", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191360936"}, {"no": 195, "t": "유리를 삼키면 투명해질까", "a": "이진솔", "p": "우리학교", "pr": 16800, "i": "9791167553171", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553171"}, {"no": 196, "t": "지구가 에너지 좀 바꿔 달래요!", "a": "윤정훈", "p": "글라이더", "pr": 16800, "i": "9791170411581", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170411581"}, {"no": 197, "t": "지속가능한 세상에서 동물과 공존한다는 것", "a": "배성호.주수원", "p": "이상북스", "pr": 15000, "i": "9788993690934", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "개인과사회", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788993690934"}, {"no": 198, "t": "치킨 행성의 비밀", "a": "남종영", "p": "창비", "pr": 14000, "i": "9788936453336", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936453336"}, {"no": 199, "t": "엄마가 절대 모르는 아들의 사춘기", "a": "박형란", "p": "미래문화사", "pr": 17800, "i": "9788972995852", "c": "학생, 학부모신청", "f": "청소년/사춘기/성교육", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788972995852"}, {"no": 200, "t": "사춘기 아들 갱년기 아빠는 성숙해지는 중입니다", "a": "신재호", "p": "설렘(SEOLREM)", "pr": 16800, "i": "9791167852120", "c": "학생, 학부모신청", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167852120"}, {"no": 201, "t": "거꾸로 환경시계 탐구생활", "a": "박숙현", "p": "파란자전거", "pr": 14500, "i": "9791194797128", "c": "교과추천도서", "f": "환경 이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194797128"}, {"no": 202, "t": "‘좋아요’는 어떻게 지구를 파괴하는가", "a": "기욤 피트롱", "p": "갈라파고스", "pr": 18500, "i": "9791187038924", "c": "추천 및 신간", "f": "환경문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791187038924"}, {"no": 203, "t": "옷을 사지 않기로 했습니다", "a": "이소연", "p": "돌고래", "pr": 17000, "i": "9791198380920", "c": "교과추천도서", "f": "환경문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198380920"}, {"no": 204, "t": "우리가 말하지 않는 지구", "a": "김가람", "p": "알에이치코리아(RHK)", "pr": 21000, "i": "9788925573656", "c": "교과추천도서", "f": "환경문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788925573656"}, {"no": 205, "t": "재앙의 지리학", "a": "로리 파슨스", "p": "오월의봄", "pr": 19800, "i": "9791168731233", "c": "교사신청", "f": "환경문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168731233"}, {"no": 206, "t": "착한 소비는 없다", "a": "최원형", "p": "블랙피쉬", "pr": 16800, "i": "9788968335327", "c": "교과추천도서", "f": "환경문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788968335327"}, {"no": 207, "t": "헌 옷 추적기", "a": "박준용.손고운.조윤상", "p": "한겨레출판", "pr": 19000, "i": "9791172133498", "c": "교과추천도서", "f": "환경문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791172133498"}, {"no": 208, "t": "침묵의 봄", "a": "레이첼 카슨", "p": "에코리브르", "pr": 22000, "i": "9788962632729", "c": "교과추천도서", "f": "환경학 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788962632729"}, {"no": 209, "t": "세상에서 제일 이해하기 쉬운 영양소도감", "a": "마키노 나오코", "p": "시사문화사", "pr": 15000, "i": "9788973233908", "c": "교과추천도서", "f": "건강에세이/건강정보", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788973233908"}, {"no": 210, "t": "BIG 아이디어 발상 31", "a": "류진한", "p": "학지사비즈", "pr": 25000, "i": "9791198211323", "c": "교과추천도서", "f": "광고/마케팅", "s": "예술", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198211323"}, {"no": 211, "t": "미술관에 간 인문학자", "a": "안현배", "p": "어바웃어북", "pr": 20000, "i": "9791192229126", "c": "교과추천도서", "f": "교양 인문학", "s": "예술", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192229126"}, {"no": 212, "t": "머릿속에 쏙쏙! 영양소 노트", "a": "사이토 가쓰히로", "p": "시그마북스", "pr": 16000, "i": "9791191307658", "c": "교과추천도서", "f": "기초과학/교양과학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191307658"}, {"no": 213, "t": "F1", "a": "김남호", "p": "부커", "pr": 38000, "i": "9791164162376", "c": "학생, 학부모신청", "f": "기타", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791164162376"}, {"no": 214, "t": "F1 더 포뮬러", "a": "조슈아 로빈슨.조너선 클레그", "p": "알에이치코리아(RHK)", "pr": 22000, "i": "9788925572765", "c": "학생, 학부모신청", "f": "기타", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788925572765"}, {"no": 215, "t": "F1 레이스카의 공기역학", "a": "윤재수", "p": "골든래빗(주)", "pr": 50000, "i": "9791191905410", "c": "학생, 학부모신청", "f": "기타", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191905410"}, {"no": 216, "t": "스포츠, AI와 동행하다", "a": "", "p": "성안당", "pr": 20000, "i": "9788931586060", "c": "학생, 학부모신청", "f": "기타", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788931586060"}, {"no": 217, "t": "반장으로서의 책임과 의무 5", "a": "수신지", "p": "귤프레스", "pr": 15000, "i": "9791196883799", "c": "학생, 학부모신청", "f": "논픽션/휴먼만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196883799"}, {"no": 218, "t": "반장으로서의 책임과 의무 6", "a": "수신지", "p": "귤프레스", "pr": 15000, "i": "9791196883768", "c": "학생, 학부모신청", "f": "논픽션/휴먼만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196883768"}, {"no": 219, "t": "미술관에 간 뇌과학자", "a": "송주현", "p": "어바웃어북", "pr": 23000, "i": "9791192229737", "c": "교과추천도서", "f": "뇌과학 일반", "s": "예술", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192229737"}, {"no": 220, "t": "영양소", "a": "김정아 옮김", "p": "성안당", "pr": 9800, "i": "9788931589573", "c": "교과추천도서", "f": "다이어트", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788931589573"}, {"no": 221, "t": "K컬처 트렌드 2026", "a": "경기콘텐츠진흥원 외 편저", "p": "미다스북스", "pr": 24000, "i": "9791173556227", "c": "교과추천도서", "f": "대중문화론", "s": "예술", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173556227"}, {"no": 222, "t": "디자인의 디자인", "a": "하라 켄야", "p": "안그라픽스", "pr": 18000, "i": "9788970593029", "c": "교과추천도서", "f": "디자인이론/비평/역사", "s": "예술", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788970593029"}, {"no": 223, "t": "세계 유명 패션 디자이너 50인", "a": "르쁠라(박민지)", "p": "크루", "pr": 39800, "i": "9791173183263", "c": "추천 및 신간", "f": "디자인이야기/디자이너/디자인 실기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173183263"}, {"no": 224, "t": "30일 밤의 뮤지컬", "a": "윤하정", "p": "동양북스(동양문고)", "pr": 23500, "i": "9791172109370", "c": "교과추천도서", "f": "뮤지컬/오페라", "s": "예술", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791172109370"}, {"no": 225, "t": "단순한 어반 스케치", "a": "단드로잉(단명주)", "p": "EJONG(이종문화사)", "pr": 21000, "i": "9788979294699", "c": "교과추천도서", "f": "미술 실기", "s": "예술", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788979294699"}, {"no": 226, "t": "미술관에 스파이가 있다", "a": "비앙카 보스커", "p": "알에이치코리아(RHK)", "pr": 23000, "i": "9788925573298", "c": "교사신청", "f": "미술 이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788925573298"}, {"no": 227, "t": "자화상 내 마음을 그리다", "a": "김선현", "p": "한길사", "pr": 28000, "i": "9788935678563", "c": "교과추천도서", "f": "미술 이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788935678563"}, {"no": 228, "t": "뱅크시의 사라진 작품들", "a": "윌 엘즈워스-존스", "p": "미술문화", "pr": 25000, "i": "9791192768335", "c": "추천 및 신간", "f": "미술가", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192768335"}, {"no": 229, "t": "이중섭, 편지화", "a": "최열", "p": "혜화1117", "pr": 24500, "i": "9791191110", "c": "추천 및 신간", "f": "미술가", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191110"}, {"no": 230, "t": "K-POP에서 만난 클래식 예술 살롱", "a": "지나김", "p": "지식과감성#", "pr": 17000, "i": "9791139219098", "c": "교과추천도서", "f": "미학/예술이론", "s": "예술", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139219098"}, {"no": 231, "t": "식탁 위의 세상", "a": "켈시 티머먼", "p": "부키", "pr": 16500, "i": "9788960515345", "c": "교과추천도서", "f": "빈곤/불평등문제", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788960515345"}, {"no": 232, "t": "윤찐빵의 생존일지", "a": "윤찐빵", "p": "사회평론아카데미", "pr": 16800, "i": "9791167071262", "c": "추천 및 신간", "f": "사진/그림 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167071262"}, {"no": 233, "t": "디지털 기술과 미래 스포츠 (반양장)", "a": "사샤 L. 슈미트 엮음", "p": "한울(한울아카데미)", "pr": 39800, "i": "9788946082991", "c": "교과추천도서", "f": "사회학 일반", "s": "체육과보건", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788946082991"}, {"no": 234, "t": "궁금했어, 영양소", "a": "임지원", "p": "나무생각", "pr": 13800, "i": "9791162182475", "c": "교과추천도서", "f": "생물과 생명", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162182475"}, {"no": 235, "t": "초간단 원팬 레시피", "a": "다솔쿠", "p": "싸이프레스", "pr": 22000, "i": "9791160322675", "c": "추천 및 신간", "f": "생활요리", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791160322675"}, {"no": 236, "t": "최강록의 요리 노트", "a": "최강록", "p": "클", "pr": 16800, "i": "9791192512419", "c": "추천 및 신간", "f": "생활요리", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192512419"}, {"no": 237, "t": "클래식 왜 안 좋아하세요?", "a": "권태영(탱로그)", "p": "빅피시", "pr": 18800, "i": "9791194033776", "c": "추천 및 신간", "f": "서양음악(클래식)", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194033776"}, {"no": 238, "t": "최고의 움직임은 어떻게 만들어지는가", "a": "롭 그레이", "p": "코치라운드", "pr": 24000, "i": "9791198140784", "c": "교과추천도서", "f": "스포츠 교육/코칭", "s": "체육과보건", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198140784"}, {"no": 239, "t": "야구 교과서", "a": "잭 햄플", "p": "보누스", "pr": 16800, "i": "9788964946077", "c": "추천 및 신간", "f": "야구", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964946077"}, {"no": 240, "t": "스트레칭의 과학", "a": "리다 말렉", "p": "사이언스북스", "pr": 25000, "i": "9791194087014", "c": "교과추천도서", "f": "요가/체조/스트레칭", "s": "체육과보건", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194087014"}, {"no": 241, "t": "꽃 아주머니와 비밀의 방", "a": "김지선", "p": "시금치", "pr": 19000, "i": "9788992371872", "c": "추천 및 신간", "f": "음악/미술/예체능", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788992371872"}, {"no": 242, "t": "내 운명의 팀을 찾아라! 프로 야구 도감", "a": "익뚜", "p": "후즈갓마이테일", "pr": 19800, "i": "9791190007832", "c": "추천 및 신간", "f": "음악/미술/예체능", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190007832"}, {"no": 243, "t": "반짝반짝 한국 미술사 그림책", "a": "안승희", "p": "한권의책", "pr": 22000, "i": "9791185237657", "c": "추천 및 신간", "f": "음악/미술/예체능", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791185237657"}, {"no": 244, "t": "킥킥! 진짜 웃긴 축구 만화 : 상식 편", "a": "익뚜", "p": "지구별아이", "pr": 19800, "i": "9791193650219", "c": "학생, 학부모신청", "f": "음악/미술/예체능", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193650219"}, {"no": 245, "t": "뮤지컬 익스프레스 슈퍼스타", "a": "황조교(황정후)", "p": "초록비책공방", "pr": 20000, "i": "9791191266337", "c": "추천 및 신간", "f": "음악이론/음악사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191266337"}, {"no": 246, "t": "서양음악사를 알고 싶은 그대에게", "a": "이인화", "p": "초봄책방", "pr": 17500, "i": "9791198503060", "c": "추천 및 신간", "f": "음악이론/음악사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198503060"}, {"no": 247, "t": "디스 이즈 어 뮤지컬 This is a Musical", "a": "최지이", "p": "라곰", "pr": 19800, "i": "9791189686819", "c": "교과추천도서", "f": "인문 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189686819"}, {"no": 248, "t": "도토리 문화센터 1", "a": "난다", "p": "문학동네", "pr": 16000, "i": "9788954689854", "c": "학생, 학부모신청", "f": "인터넷 연재 만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954689854"}, {"no": 249, "t": "도토리 문화센터 2", "a": "난다", "p": "문학동네", "pr": 17000, "i": "9788954698221", "c": "학생, 학부모신청", "f": "인터넷 연재 만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954698221"}, {"no": 250, "t": "도토리 문화센터 3", "a": "난다", "p": "문학동네", "pr": 18000, "i": "9791141602932", "c": "학생, 학부모신청", "f": "인터넷 연재 만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141602932"}, {"no": 251, "t": "해오와 사라 1", "a": "송송이", "p": "클", "pr": 16000, "i": "9791194374329", "c": "학생, 학부모신청", "f": "인터넷 연재 만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194374329"}, {"no": 252, "t": "해오와 사라 2", "a": "송송이", "p": "클", "pr": 16000, "i": "9791194374336", "c": "학생, 학부모신청", "f": "인터넷 연재 만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194374336"}, {"no": 253, "t": "해오와 사라 3", "a": "송송이", "p": "클", "pr": 16000, "i": "9791194374343", "c": "학생, 학부모신청", "f": "인터넷 연재 만화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194374343"}, {"no": 254, "t": "사람 사는 세상을 위한 미술관 인권 수업", "a": "공주형", "p": "탐", "pr": 17000, "i": "9788964965276", "c": "추천 및 신간", "f": "청소년 문화/예술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964965276"}, {"no": 255, "t": "선생님이 들려주는 스포츠 이야기", "a": "조보성", "p": "금성출판사", "pr": 13000, "i": "9788907103444", "c": "교과추천도서", "f": "청소년 문화/예술", "s": "체육과보건", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788907103444"}, {"no": 256, "t": "운동장엔 없던 스포츠 이야기", "a": "이효성.장태욱.주승민", "p": "더디퍼런스", "pr": 17000, "i": "9791161255781", "c": "추천 및 신간", "f": "청소년 문화/예술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161255781"}, {"no": 257, "t": "클래식 음악, 뭔데 이렇게 쉬워?", "a": "나카가와 유스케", "p": "리듬문고", "pr": 13500, "i": "9788965137177", "c": "교과추천도서", "f": "청소년 문화/예술", "s": "예술", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965137177"}, {"no": 258, "t": "10대와 통하는 스포츠 이야기", "a": "탁민혁.김윤진", "p": "철수와영희", "pr": 13000, "i": "9791188215232", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "체육과보건", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188215232"}, {"no": 259, "t": "쫌 이상한 미술 시간", "a": "이종원 외", "p": "창비교육", "pr": 18000, "i": "9791165703974", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "예술", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165703974"}, {"no": 260, "t": "누가 그렸을까? 제목이 뭘까?", "a": "WG Contents Group", "p": "북핀", "pr": 18000, "i": "9791191443332", "c": "교과추천도서", "f": "청소년 인문/사회", "s": "언어습득", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191443332"}, {"no": 261, "t": "월드컵 오디세이", "a": "고두현", "p": "와이드룩", "pr": 18000, "i": "9791192090245", "c": "추천 및 신간", "f": "축구", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192090245"}, {"no": 262, "t": "간송미술 36 : 회화", "a": "백인산", "p": "컬처그라퍼", "pr": 20000, "i": "9788970597805", "c": "교과추천도서", "f": "한국미술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788970597805"}, {"no": 263, "t": "볼수록 빠져드는 한국 미술사", "a": "장주연", "p": "미진사", "pr": 15000, "i": "9788940805909", "c": "교과추천도서", "f": "한국미술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788940805909"}, {"no": 264, "t": "볼수록 아름다운 우리 그림", "a": "이소영", "p": "미술문화", "pr": 22000, "i": "9791192768328", "c": "교과추천도서", "f": "한국미술", "s": "예술", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192768328"}, {"no": 265, "t": "살아남은 그림들", "a": "조상인", "p": "눌와", "pr": 21000, "i": "9791189074203", "c": "교과추천도서", "f": "한국미술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189074203"}, {"no": 266, "t": "알고 보면 반할 민화", "a": "윤열수", "p": "태학사", "pr": 22000, "i": "9791168100664", "c": "교과추천도서", "f": "한국미술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168100664"}, {"no": 267, "t": "전통 미술의 상징 코드", "a": "허균", "p": "돌베개", "pr": 22000, "i": "9791194442509", "c": "교과추천도서", "f": "한국미술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194442509"}, {"no": 268, "t": "조선 미술관", "a": "탁현규", "p": "블랙피쉬", "pr": 16800, "i": "9788968334177", "c": "교과추천도서", "f": "한국미술", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788968334177"}, {"no": 269, "t": "배구 코트의 맛과 멋, 그리고 울림", "a": "허지훈", "p": "생각나눔(기획실크)", "pr": 15000, "i": "9791170487715", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170487715"}, {"no": 270, "t": "주문하신 복근 나왔습니다", "a": "캥맨", "p": "중앙books(중앙북스)", "pr": 22000, "i": "9788927881001", "c": "학생, 학부모신청", "f": "헬스/피트니스", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788927881001"}, {"no": 271, "t": "1일 1페이지 영어 어휘력 365", "a": "김동섭", "p": "현대지성", "pr": 22000, "i": "9791139724356", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139724356"}, {"no": 272, "t": "좋은 문장 표현에서 문장부호까지!", "a": "이수연", "p": "마리북스", "pr": 18000, "i": "9791193270134", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193270134"}, {"no": 273, "t": "한 끗 어휘력", "a": "박선주", "p": "매일경제신문사", "pr": 18000, "i": "9791164847136", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791164847136"}, {"no": 274, "t": "단 한 줄만 내 마음에 새긴다고 해도", "a": "나민애", "p": "포레스트북스", "pr": 23800, "i": "9791194530398", "c": "추천 및 신간", "f": "글쓰기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194530398"}, {"no": 275, "t": "생각하는 힘, 글쓰기", "a": "임택균 외", "p": "동국대학교출판부", "pr": 15000, "i": "9788978017879", "c": "교과추천도서", "f": "글쓰기", "s": "언어와문학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788978017879"}, {"no": 276, "t": "이상한 문장 그만 쓰는 법", "a": "이주윤", "p": "빅피시", "pr": 17800, "i": "9791199491731", "c": "추천 및 신간", "f": "글쓰기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199491731"}, {"no": 277, "t": "하루 10분, 글쓰기가 쉬워지는 신문 필사", "a": "조선일보 CS본부 엮음", "p": "조선일보사", "pr": 25000, "i": "9791190640268", "c": "추천 및 신간", "f": "글쓰기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190640268"}, {"no": 278, "t": "나는, 오늘 시를 쓴다 (큰글자책)", "a": "안지민 엮음", "p": "리아앤제시", "pr": 16900, "i": "9791197702457", "c": "추천 및 신간", "f": "글씨 쓰기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197702457"}, {"no": 279, "t": "하루 필사 : 헤르만 헤세 《데미안》 편", "a": "헤르만 헤세", "p": "코너스톤", "pr": 7800, "i": "8800319841088", "c": "추천 및 신간", "f": "글씨 쓰기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=8800319841088"}, {"no": 280, "t": "(원서)The Boy Who Harnessed the Wind: Young Readers Edition", "a": "윌리엄 캄쾀바", "p": "Puffin", "pr": 15000, "i": "9781984816122", "c": "교과추천도서", "f": "논픽션 챕터북", "s": "언어습득", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9781984816122"}, {"no": 281, "t": "영어 속담과 명언", "a": "백만영어 연구회", "p": "백만문화사", "pr": 15000, "i": "9791189272371", "c": "교과추천도서", "f": "영어독해", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189272371"}, {"no": 282, "t": "책 안 읽는 세대를 위한 영어 읽기 지도", "a": "김혜영", "p": "북랩", "pr": 16800, "i": "9791165396435", "c": "추천 및 신간", "f": "영어독해", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165396435"}, {"no": 283, "t": "마음에 힘이 되는 하루 한 문장 영시 필사", "a": "위혜정", "p": "센시오", "pr": 22000, "i": "9791166572142", "c": "추천 및 신간", "f": "영어학습법", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791166572142"}, {"no": 284, "t": "모든 단어에는 이야기가 있다", "a": "이진민", "p": "동양북스(동양문고)", "pr": 17500, "i": "9791172100612", "c": "추천 및 신간", "f": "인문 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791172100612"}, {"no": 285, "t": "5분 비속어 수업", "a": "권희린", "p": "우리학교", "pr": 16800, "i": "9791167553461", "c": "추천 및 신간", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553461"}, {"no": 286, "t": "1일 1주제 9분 만에 끝내는 영어", "a": "이지형", "p": "초록비책공방", "pr": 18500, "i": "9791124126066", "c": "추천 및 신간", "f": "청소년 영어", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126066"}, {"no": 287, "t": "꺾이지 않는 글쓰기", "a": "이락", "p": "탐", "pr": 15000, "i": "9788964965450", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964965450"}, {"no": 288, "t": "미래 세대를 위한 우리말과 문해력", "a": "최종규", "p": "철수와영희", "pr": 15000, "i": "9791171530298", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530298"}, {"no": 289, "t": "생각이 깊어지는 열세 살 우리말 공부", "a": "변택주", "p": "원더박스", "pr": 15000, "i": "9791192953496", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192953496"}, {"no": 290, "t": "한자의 쓸모", "a": "박수밀", "p": "여름의서재", "pr": 20000, "i": "9791198984814", "c": "추천 및 신간", "f": "한국어/한문", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198984814"}, {"no": 291, "t": "쉽게 배우는 중학 한자 부수로 끝내기", "a": "김종혁", "p": "중앙에듀북스", "pr": 17500, "i": "9788994465524", "c": "추천 및 신간", "f": "한자 시험 대비", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788994465524"}, {"no": 292, "t": "타이완 100배 즐기기", "a": "김미려", "p": "알에이치코리아(RHK)", "pr": 17500, "i": "9788925567686", "c": "학생, 학부모신청", "f": "홍콩/대만/마카오여행 가이드북", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788925567686"}, {"no": 293, "t": "주문하신 대만 간식 나왔습니다", "a": "송채원(송차이)", "p": "책밥", "pr": 19800, "i": "9791193049358", "c": "학생, 학부모신청", "f": "홍콩/대만/마카오여행 가이드북", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193049358"}, {"no": 294, "t": "1938 타이완 여행기", "a": "양솽쯔", "p": "마티스블루", "pr": 18800, "i": "9791199242531", "c": "학생, 학부모신청", "f": "기타 국가 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199242531"}, {"no": 295, "t": "301句로 끝내는 중국어 회화 합본", "a": "캉위화.라이스핑", "p": "다락원", "pr": 35000, "i": "9788927723578", "c": "추천 및 신간", "f": "중국어 회화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788927723578"}, {"no": 296, "t": "맛있는 여행 중국어", "a": "이승해.진리", "p": "맛있는Books(JRC북스)", "pr": 14000, "i": "9791161481692", "c": "추천 및 신간", "f": "중국어 회화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161481692"}, {"no": 297, "t": "진짜 여행 일본어", "a": "시원스쿨어학연구소", "p": "시원스쿨닷컴", "pr": 9800, "i": "9791161508788", "c": "추천 및 신간", "f": "일본어 회화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161508788"}, {"no": 298, "t": "맛있는 베트남어 독학 첫걸음", "a": "홍빛나", "p": "맛있는Books(JRC북스)", "pr": 15500, "i": "9791161480244", "c": "추천 및 신간", "f": "기타 동양어", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161480244"}, {"no": 299, "t": "베트남어 회화 핵심패턴 233", "a": "김효정", "p": "길벗이지톡", "pr": 16000, "i": "9791159242281", "c": "추천 및 신간", "f": "기타 동양어", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791159242281"}, {"no": 300, "t": "일단해 베트남어 첫걸음", "a": "홍빛나", "p": "동양북스(동양문고)", "pr": 19800, "i": "9791157688616", "c": "추천 및 신간", "f": "기타 동양어", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791157688616"}, {"no": 301, "t": "GO! 독학 베트남어 첫걸음", "a": "윤선애.시원스쿨 베트남어연구소", "p": "시원스쿨닷컴", "pr": 16700, "i": "9791161509389", "c": "추천 및 신간", "f": "기타 동양어", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161509389"}, {"no": 302, "t": "괴테는 모든 것을 말했다", "a": "스즈키 유이", "p": "리프", "pr": 17000, "i": "9791194530701", "c": "학생, 학부모신청", "f": "1950년대 이후 일본소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194530701"}, {"no": 303, "t": "마음을 요리합니다, 정식집 자츠", "a": "하라다 히카", "p": "문예춘추사", "pr": 16800, "i": "9788976047366", "c": "추천 및 신간", "f": "1950년대 이후 일본소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788976047366"}, {"no": 304, "t": "유년의 뜰", "a": "오정희", "p": "문학과지성사", "pr": 13000, "i": "9788932030616", "c": "학생, 학부모신청", "f": "2000년대 이전 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788932030616"}, {"no": 305, "t": "겨울 정원", "a": "이주란 외", "p": "은행나무", "pr": 18000, "i": "9791167375896", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167375896"}, {"no": 306, "t": "노 피플 존", "a": "정이현", "p": "문학동네", "pr": 18000, "i": "9791141613433", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141613433"}, {"no": 307, "t": "반에 반의 반", "a": "천운영", "p": "문학동네", "pr": 15000, "i": "9788954672023", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954672023"}, {"no": 308, "t": "백 명 버튼", "a": "김동식", "p": "위즈덤하우스", "pr": 13000, "i": "9791168127081", "c": "추천 및 신간", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168127081"}, {"no": 309, "t": "보그나르 주식회사", "a": "김동식", "p": "요다", "pr": 16000, "i": "9791190749855", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190749855"}, {"no": 310, "t": "슬픈 마음 있는 사람", "a": "정기현", "p": "스위밍꿀", "pr": 18500, "i": "9791193773109", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193773109"}, {"no": 311, "t": "신경 쓰이는 사람", "a": "김화진 외", "p": "북다", "pr": 18000, "i": "9791170613664", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170613664"}, {"no": 312, "t": "약속의 세대", "a": "백온유", "p": "문학동네", "pr": 18000, "i": "9791141615819", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141615819"}, {"no": 313, "t": "와이카노", "a": "김유원", "p": "위즈덤하우스", "pr": 13000, "i": "9791171714629", "c": "추천 및 신간", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171714629"}, {"no": 314, "t": "절창", "a": "구병모", "p": "문학동네", "pr": 18000, "i": "9791141602451", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141602451"}, {"no": 315, "t": "죽은 왕녀를 위한 파반느 (양장 특별판)", "a": "박민규", "p": "위즈덤하우스", "pr": 20000, "i": "9791171715503", "c": "추천 및 신간", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171715503"}, {"no": 316, "t": "쥬디 할머니", "a": "박완서", "p": "문학동네", "pr": 18500, "i": "9791141615055", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141615055"}, {"no": 317, "t": "카지노", "a": "김진명", "p": "새움", "pr": 16500, "i": "9791192684239", "c": "추천 및 신간", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192684239"}, {"no": 318, "t": "할매", "a": "황석영", "p": "창비", "pr": 16800, "i": "9788936439880", "c": "학생, 학부모신청", "f": "2000년대 이후 한국소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936439880"}, {"no": 319, "t": "2026 인생일력", "a": "민음사 편집부", "p": "민음사", "pr": 22000, "i": "2090000162264", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=2090000162264"}, {"no": 320, "t": "망가진 세계에서 우리는", "a": "강양구", "p": "북트리거", "pr": 17800, "i": "9791193378496", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378496"}, {"no": 321, "t": "우리가 사랑한 단어들", "a": "신효원", "p": "생각지도", "pr": 18800, "i": "9791187875512", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791187875512"}, {"no": 322, "t": "나나 올리브에게", "a": "루리", "p": "문학동네", "pr": 15000, "i": "9791141614072", "c": "추천 및 신간", "f": "국내창작동화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141614072"}, {"no": 323, "t": "언제나 다정 죽집", "a": "우신영", "p": "비룡소", "pr": 15000, "i": "9788949122076", "c": "추천 및 신간", "f": "국내창작동화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788949122076"}, {"no": 324, "t": "우리가 봄을 건너는 법", "a": "정은주", "p": "우리학교", "pr": 15000, "i": "9791167553584", "c": "추천 및 신간", "f": "국내창작동화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553584"}, {"no": 325, "t": "컵라면은 절대로 불어선 안 돼", "a": "김지완", "p": "문학동네", "pr": 13500, "i": "9791141612306", "c": "추천 및 신간", "f": "국내창작동화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141612306"}, {"no": 326, "t": "현진에게", "a": "이수진", "p": "사계절", "pr": 13000, "i": "9791169813938", "c": "교과추천도서", "f": "국내창작동화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791169813938"}, {"no": 327, "t": "제11호 태풍 힌남노", "a": "이종철", "p": "보리", "pr": 17000, "i": "9791163143895", "c": "추천 및 신간", "f": "그래픽노블", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791163143895"}, {"no": 328, "t": "나의 독산동", "a": "유은실", "p": "문학과지성사", "pr": 16000, "i": "9788932035451", "c": "추천 및 신간", "f": "그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788932035451"}, {"no": 329, "t": "만약에", "a": "조지프 러디어드 키플링 글", "p": "살림어린이", "pr": 15000, "i": "9788952230294", "c": "추천 및 신간", "f": "그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788952230294"}, {"no": 330, "t": "수영장에 토성이 떨어졌다고?", "a": "벤디 베르니치", "p": "두마리토끼책", "pr": 16800, "i": "9791199328839", "c": "추천 및 신간", "f": "그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199328839"}, {"no": 331, "t": "유시민의 글쓰기 특강", "a": "유시민", "p": "생각의길", "pr": 15000, "i": "9788965133520", "c": "교과추천도서", "f": "글쓰기", "s": "언어와문학", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965133520"}, {"no": 332, "t": "나이프를 발음하는 법", "a": "수반캄 탐마봉사", "p": "문학동네", "pr": 16800, "i": "9791141608", "c": "추천 및 신간", "f": "기타 국가 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141608"}, {"no": 333, "t": "나로 살 결심", "a": "문유석", "p": "문학동네", "pr": 17500, "i": "9791141613990", "c": "교사신청", "f": "기타 명사에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141613990"}, {"no": 334, "t": "아무튼, 메모", "a": "정혜윤", "p": "녹스", "pr": 12000, "i": "9791199405868", "c": "추천 및 신간", "f": "기타 명사에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199405868"}, {"no": 335, "t": "교과서 시 다보기 1", "a": "씨앤에이논술 연구팀 엮음", "p": "C&A에듀", "pr": 15000, "i": "9788967038762", "c": "교과추천도서", "f": "논술참고도서", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788967038762"}, {"no": 336, "t": "당나귀는 당나귀답게", "a": "아지즈 네신", "p": "푸른숲주니어", "pr": 12000, "i": "9788971844281", "c": "교과추천도서", "f": "청소년소설", "s": "진로", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788971844281"}, {"no": 337, "t": "즐거운 소음", "a": "폴 플라이시먼", "p": "다산어린이", "pr": 17000, "i": "9791130652955", "c": "추천 및 신간", "f": "동시/동요", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130652955"}, {"no": 338, "t": "사탄탱고", "a": "크러스너호르커이 라슬로", "p": "알마", "pr": 19800, "i": "9791159921445", "c": "학생, 학부모신청", "f": "동유럽소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791159921445"}, {"no": 339, "t": "드디어 만나는 북유럽 동화", "a": "페테르 크리스텐 아스비에른센", "p": "현대지성", "pr": 18500, "i": "9791139721911", "c": "추천 및 신간", "f": "북유럽소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139721911"}, {"no": 340, "t": "좋은 사람 도감", "a": "묘엔 스구루.사사키 히나.마나코 지에", "p": "서교책방", "pr": 16800, "i": "9791198944047", "c": "교사신청", "f": "사진/그림 에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198944047"}, {"no": 341, "t": "한 줄 시 읽는 법", "a": "정수윤", "p": "유유", "pr": 15000, "i": "9791167701091", "c": "추천 및 신간", "f": "시론", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167701091"}, {"no": 342, "t": "남극", "a": "클레어 키건", "p": "다산책방", "pr": 18000, "i": "9791130673332", "c": "추천 및 신간", "f": "아일랜드소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130673332"}, {"no": 343, "t": "드디어 만나는 영국 동화", "a": "조셉 제이콥스", "p": "현대지성", "pr": 16900, "i": "9791139718775", "c": "추천 및 신간", "f": "영미소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139718775"}, {"no": 344, "t": "레볼루셔너리 로드", "a": "리처드 예이츠", "p": "민음사", "pr": 17000, "i": "9788937464768", "c": "추천 및 신간", "f": "영미소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788937464768"}, {"no": 345, "t": "벌집과 꿀", "a": "폴 윤", "p": "엘리", "pr": 17000, "i": "9791191247541", "c": "교사신청", "f": "영미소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191247541"}, {"no": 346, "t": "숲의 신", "a": "리즈 무어", "p": "은행나무", "pr": 21000, "i": "9791167375803", "c": "추천 및 신간", "f": "영미소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167375803"}, {"no": 347, "t": "인간의 선택", "a": "이반 세르게예비치 투르게네프 외", "p": "해밀누리", "pr": 16800, "i": "9791175052178", "c": "추천 및 신간", "f": "영미소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791175052178"}, {"no": 348, "t": "기억나요?", "a": "시드니 스미스", "p": "책읽는곰", "pr": 15000, "i": "9791158364601", "c": "추천 및 신간", "f": "외국 그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158364601"}, {"no": 350, "t": "오늘이 내일을 데려올 거야", "a": "에린 엔트라다 켈리", "p": "책읽는곰", "pr": 18000, "i": "9791158365479", "c": "추천 및 신간", "f": "외국창작동화", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791158365479"}, {"no": 351, "t": "처음 시작하는 비평 수업", "a": "기타무라 사에", "p": "지노", "pr": 16800, "i": "9791193878347", "c": "추천 및 신간", "f": "인문 비평", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193878347"}, {"no": 352, "t": "엄마가 유령이 되었어!", "a": "노부미", "p": "길벗어린이", "pr": 12000, "i": "9788955823509", "c": "학생, 학부모신청", "f": "일본", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788955823509"}, {"no": 353, "t": "프랑켄슈타인", "a": "메리 셸리", "p": "살림", "pr": 12000, "i": "9788952238207", "c": "학생, 학부모신청", "f": "청소년 고전", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788952238207"}, {"no": 354, "t": "가시 인간이 지구를 구한다", "a": "남유하", "p": "위즈덤하우스", "pr": 11000, "i": "9791171714551", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171714551"}, {"no": 355, "t": "가짜 인간", "a": "박영란", "p": "마음이음", "pr": 13500, "i": "9791189010867", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189010867"}, {"no": 356, "t": "거기, 있나요?", "a": "이필원", "p": "낮은산", "pr": 11000, "i": "9791155251683", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251683"}, {"no": 357, "t": "검지의 힘", "a": "이선주", "p": "돌베개", "pr": 15000, "i": "9791194442141", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194442141"}, {"no": 358, "t": "그린플루언서", "a": "타니아 로이드 치", "p": "라임", "pr": 14000, "i": "9791194028482", "c": "교사신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194028482"}, {"no": 359, "t": "김누아의 가설", "a": "길상효 외", "p": "문학동네", "pr": 13500, "i": "9791141609177", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141609177"}, {"no": 360, "t": "나만 아는 거짓말", "a": "김하연", "p": "다산책방", "pr": 15000, "i": "9791130677118", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130677118"}, {"no": 361, "t": "나의 리을 이야기", "a": "신소영", "p": "씨드북(주)", "pr": 14000, "i": "9791160517354", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791160517354"}, {"no": 362, "t": "내 책상 위의 비밀", "a": "최혜련", "p": "마음이음", "pr": 13500, "i": "9791192183879", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192183879"}, {"no": 363, "t": "너의 꿈에도 내가 나오는지", "a": "김지현", "p": "우리학교", "pr": 14000, "i": "9791167552877", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167552877"}, {"no": 364, "t": "너의 모든 공이 좋아!", "a": "이민항", "p": "다른", "pr": 14000, "i": "9791156336822", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156336822"}, {"no": 365, "t": "너의 목소리를 보여 줘 1", "a": "앤 클레어 르조트", "p": "휴머니스트", "pr": 16000, "i": "9791170870425", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170870425"}, {"no": 366, "t": "너의 목소리를 보여 줘 2", "a": "앤 클레어 르조트", "p": "휴머니스트", "pr": 16000, "i": "9791170870890", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170870890"}, {"no": 367, "t": "네보의 푸른 책", "a": "마논 스테판 로스", "p": "다산책방", "pr": 15000, "i": "9791130671062", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130671062"}, {"no": 368, "t": "녹색 광선", "a": "강석희", "p": "돌베개", "pr": 15000, "i": "9791194442455", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194442455"}, {"no": 369, "t": "단어 줍는 소녀들", "a": "소피 캐머런", "p": "나무를심는사람들", "pr": 14800, "i": "9791193156278", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193156278"}, {"no": 370, "t": "달리기의 맛", "a": "누카가 미오", "p": "창비", "pr": 12000, "i": "9788936456801", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936456801"}, {"no": 371, "t": "당근이세요?", "a": "표명희", "p": "창비", "pr": 15000, "i": "9788936457334", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936457334"}, {"no": 372, "t": "두 번째 달에게", "a": "박미연", "p": "자음과모음", "pr": 15000, "i": "9788954452342", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954452342"}, {"no": 373, "t": "들키지 않을 거야", "a": "모린 가비", "p": "나무처럼(알펍)", "pr": 16800, "i": "9788992877695", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788992877695"}, {"no": 374, "t": "리타", "a": "마리 파블렌코", "p": "동녘", "pr": 16800, "i": "9788972971627", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788972971627"}, {"no": 375, "t": "망한 공원에서 만나", "a": "오미경", "p": "다른", "pr": 14000, "i": "9791156336914", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156336914"}, {"no": 376, "t": "못갖춘마디", "a": "채기성", "p": "사계절", "pr": 14000, "i": "9791169813990", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791169813990"}, {"no": 377, "t": "미래가 보이는 일기장", "a": "고혜원", "p": "다이브", "pr": 16800, "i": "9791194033721", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194033721"}, {"no": 378, "t": "민수의 2.7그램", "a": "윤해연", "p": "서유재", "pr": 14000, "i": "9791189034955", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189034955"}, {"no": 379, "t": "블랙북", "a": "김하연", "p": "슈크림북", "pr": 14000, "i": "9791198948731", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198948731"}, {"no": 380, "t": "비스킷 2", "a": "김선미", "p": "위즈덤하우스", "pr": 14800, "i": "9791171714360", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171714360"}, {"no": 381, "t": "사실은 불안하기 때문이야", "a": "임지형 외", "p": "특별한서재", "pr": 14500, "i": "9791167031884", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167031884"}, {"no": 382, "t": "수상한 진흙", "a": "루이스 새커", "p": "창비", "pr": 13000, "i": "9788936456719", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936456719"}, {"no": 383, "t": "스위치 ON", "a": "이송현", "p": "우리학교", "pr": 14000, "i": "9791167553478", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553478"}, {"no": 384, "t": "스카이다이빙", "a": "문경민", "p": "문학동네", "pr": 13500, "i": "9791141615123", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141615123"}, {"no": 385, "t": "시티 보이즈", "a": "정보훈", "p": "창비", "pr": 15000, "i": "9788936457389", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936457389"}, {"no": 386, "t": "신상문구점", "a": "김선영", "p": "특별한서재", "pr": 14000, "i": "9791167031754", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167031754"}, {"no": 387, "t": "야간비행", "a": "앙투안 드 생텍쥐페리", "p": "푸른숲주니어", "pr": 12000, "i": "9791156750239", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156750239"}, {"no": 388, "t": "어부바 앱에 접속하셨습니다", "a": "김경미", "p": "슈크림북", "pr": 14000, "i": "9791124223048", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124223048"}, {"no": 389, "t": "여름의 비행운", "a": "이혜령", "p": "소원나무", "pr": 15000, "i": "9791174760449", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791174760449"}, {"no": 390, "t": "연애 운세, 너에게 적중", "a": "김경은 외", "p": "문학동네", "pr": 13500, "i": "9791141614973", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141614973"}, {"no": 391, "t": "오늘만 최애 변경", "a": "범유진", "p": "허블", "pr": 14000, "i": "9791193078495", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193078495"}, {"no": 392, "t": "오늘의 의뢰: 너만 아는 비밀", "a": "김성민", "p": "창비교육", "pr": 15000, "i": "9791165703578", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165703578"}, {"no": 393, "t": "온화의 마음", "a": "하유지", "p": "뜨인돌", "pr": 13000, "i": "9788958070740", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788958070740"}, {"no": 394, "t": "왝왝이가 그곳에 있었다", "a": "이로아", "p": "문학동네", "pr": 13500, "i": "9791141608873", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141608873"}, {"no": 395, "t": "유자는 없어", "a": "김지현", "p": "돌베개", "pr": 15000, "i": "9791194442554", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194442554"}, {"no": 396, "t": "이 망할 열네 살", "a": "김혜정", "p": "사계절", "pr": 15000, "i": "9791169814164", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791169814164"}, {"no": 397, "t": "일곱 개의 초록", "a": "황보나", "p": "문학동네", "pr": 13500, "i": "9791141613723", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141613723"}, {"no": 398, "t": "잃어버린 건 없는지 잊은 건 아닌지", "a": "이꽃님", "p": "이끌", "pr": 15000, "i": "9791198792129", "c": "학생, 학부모신청", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198792129"}, {"no": 399, "t": "저승 우체부 배달희", "a": "부연정", "p": "다산책방", "pr": 14000, "i": "9791130677101", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130677101"}, {"no": 401, "t": "천국에 염라가 산다", "a": "이담", "p": "사회평론주니어", "pr": 14500, "i": "9791197407086", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197407086"}, {"no": 402, "t": "친밀한 가해자", "a": "손현주", "p": "우리학교", "pr": 14000, "i": "9791167553591", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553591"}, {"no": 403, "t": "캐리커처", "a": "단요", "p": "창비", "pr": 15000, "i": "9788936457402", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936457402"}, {"no": 404, "t": "코너를 달리는 방법", "a": "이필원", "p": "사계절", "pr": 9000, "i": "9791169811460", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791169811460"}, {"no": 405, "t": "트윈", "a": "유진서", "p": "위즈덤하우스", "pr": 15000, "i": "9791171714803", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171714803"}, {"no": 406, "t": "판데모니움", "a": "유상아", "p": "소원나무", "pr": 16800, "i": "9791174760548", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791174760548"}, {"no": 407, "t": "평범한 아이들", "a": "남유하", "p": "낮은산", "pr": 10000, "i": "9791155251546", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251546"}, {"no": 408, "t": "햇빛 속으로", "a": "배봉기", "p": "마음이음", "pr": 13500, "i": "9791192183732", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192183732"}, {"no": 409, "t": "호구", "a": "김민서", "p": "창비", "pr": 15000, "i": "9788936457457", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936457457"}, {"no": 410, "t": "활강", "a": "지은", "p": "위즈덤하우스", "pr": 15000, "i": "9791171715497", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171715497"}, {"no": 411, "t": "고양이가 사료를 아드득 까드득", "a": "권민경", "p": "쉬는시간", "pr": 12000, "i": "9791198890566", "c": "추천 및 신간", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791198890566"}, {"no": 412, "t": "나 우는 연기 잘하지", "a": "김승일", "p": "창비교육", "pr": 11000, "i": "9791165703608", "c": "교과추천도서", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165703608"}, {"no": 413, "t": "나는 기울어져 걷지", "a": "김물", "p": "창비교육", "pr": 11000, "i": "9791165704148", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165704148"}, {"no": 414, "t": "누군가 나의 미래를 상상하고 있다", "a": "이원재", "p": "낮은산", "pr": 12000, "i": "9791155251812", "c": "추천 및 신간", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251812"}, {"no": 415, "t": "달리와 달리는 기분", "a": "김개미", "p": "창비교육", "pr": 11000, "i": "9791165703882", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165703882"}, {"no": 416, "t": "도넛을 나누는 기분", "a": "김소형 외", "p": "창비교육", "pr": 13000, "i": "9791165703257", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165703257"}, {"no": 417, "t": "보란 듯이 걸었다", "a": "김애란", "p": "창비교육", "pr": 10000, "i": "9791189228859", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189228859"}, {"no": 418, "t": "신발 멀리 차기", "a": "서형오", "p": "창비교육", "pr": 10000, "i": "9791165700737", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165700737"}, {"no": 419, "t": "열다섯, 시를 만나는 순간 1", "a": "금동원 그림", "p": "다산책방", "pr": 14000, "i": "9791130674711", "c": "추천 및 신간", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130674711"}, {"no": 420, "t": "열다섯, 시를 만나는 순간 2", "a": "금동원 그림", "p": "다산책방", "pr": 14000, "i": "9791130674728", "c": "추천 및 신간", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130674728"}, {"no": 421, "t": "우리 어멍은 해녀", "a": "허유미", "p": "창비교육", "pr": 10000, "i": "9791165700034", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165700034"}, {"no": 422, "t": "이제 호랑이가 온다", "a": "남호섭", "p": "창비교육", "pr": 10000, "i": "9791165701116", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165701116"}, {"no": 423, "t": "주눅이 사라지는 방법", "a": "유현아", "p": "창비교육", "pr": 10000, "i": "9791165700355", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165700355"}, {"no": 424, "t": "친구를 기억하는 방식", "a": "김중미", "p": "낮은산", "pr": 12000, "i": "9791155251805", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251805"}, {"no": 425, "t": "해피 버스데이 우리 동네", "a": "신지영", "p": "창비교육", "pr": 10000, "i": "9791165700942", "c": "교사신청", "f": "청소년 에세이/시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165700942"}, {"no": 426, "t": "너에게 들려주는 꿋꿋한 말", "a": "김종원", "p": "퍼스트펭귄", "pr": 18000, "i": "9791199349209", "c": "학생, 학부모신청", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199349209"}, {"no": 427, "t": "던지는 아이", "a": "이옥수.정명섭.박진규", "p": "마음이음", "pr": 14500, "i": "9791194494348", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194494348"}, {"no": 428, "t": "돈의 모든 것", "a": "김성호", "p": "천개의바람", "pr": 13000, "i": "9791165735821", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791165735821"}, {"no": 429, "t": "차이나는 국어시간", "a": "공규택", "p": "북트리거", "pr": 17500, "i": "9791193378342", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378342"}, {"no": 430, "t": "바람을 길들인 풍차소년", "a": "윌리엄 캄쾀바", "p": "서해문집", "pr": 14500, "i": "9788974834128", "c": "교과추천도서", "f": "청소년 자기계발", "s": "언어습득", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788974834128"}, {"no": 431, "t": "느낌의 공동체", "a": "신형철", "p": "문학동네", "pr": 16000, "i": "9788954614511", "c": "교과추천도서", "f": "한국에세이", "s": "언어와문학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954614511"}, {"no": 432, "t": "애린 왕자", "a": "앙투안 드 생텍쥐페리 저자", "p": "이팝", "pr": 11000, "i": "9791197182204", "c": "추천 및 신간", "f": "프랑스소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197182204"}, {"no": 433, "t": "야간비행", "a": "앙투안 드 생텍쥐페리", "p": "문학동네", "pr": 10000, "i": "9788954651868", "c": "추천 및 신간", "f": "프랑스소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954651868"}, {"no": 434, "t": "에린 왕자", "a": "앙투안 드 생텍쥐페리", "p": "이팝", "pr": 11000, "i": "9791197182235", "c": "추천 및 신간", "f": "프랑스소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197182235"}, {"no": 435, "t": "아무도 오지 않는 곳에서", "a": "천선란", "p": "허블", "pr": 17000, "i": "9791193078709", "c": "추천 및 신간", "f": "한국 과학소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193078709"}, {"no": 436, "t": "꽃에 미친 김 군", "a": "김동성", "p": "보림", "pr": 30000, "i": "9788947553", "c": "추천 및 신간", "f": "한국 그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788947553"}, {"no": 437, "t": "나 너희 옆집 살아", "a": "성동혁", "p": "봄볕", "pr": 22000, "i": "9791193150597", "c": "추천 및 신간", "f": "한국 그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193150597"}, {"no": 438, "t": "마음 그릇", "a": "전보라", "p": "토끼섬", "pr": 18000, "i": "9791199524361", "c": "추천 및 신간", "f": "한국 그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199524361"}, {"no": 439, "t": "마음먹기", "a": "자현", "p": "달그림", "pr": 14000, "i": "9791196775346", "c": "추천 및 신간", "f": "한국 그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196775346"}, {"no": 440, "t": "문 밖에 사자가 있다", "a": "윤아해", "p": "뜨인돌어린이", "pr": 16000, "i": "9788958079484", "c": "추천 및 신간", "f": "한국 그림책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788958079484"}, {"no": 441, "t": "이렇게 된 이상 포항으로 간다", "a": "정보라.최의택", "p": "요다", "pr": 16800, "i": "9791190749923", "c": "추천 및 신간", "f": "한국 추리/미스터리소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190749923"}, {"no": 442, "t": "양재천 기담", "a": "남유하", "p": "소중한책", "pr": 16800, "i": "9791199326200", "c": "추천 및 신간", "f": "한국 호러.공포소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199326200"}, {"no": 443, "t": "감자의 멜랑콜리", "a": "이기성", "p": "창비", "pr": 12000, "i": "9788936425159", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425159"}, {"no": 444, "t": "그날의 초록빛", "a": "김용택", "p": "창비", "pr": 12000, "i": "9788936425333", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425333"}, {"no": 445, "t": "나는 내 슬픔과 어리석음에 눌리어", "a": "윤동주 외", "p": "저녁달", "pr": 16800, "i": "9791189217945", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189217945"}, {"no": 446, "t": "내가 이유인 것 같아서", "a": "이우성", "p": "문학과지성사", "pr": 12000, "i": "9788932040646", "c": "추천 및 신간", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788932040646"}, {"no": 447, "t": "누구나 시 하나쯤 가슴에 품고 산다", "a": "김선경 엮음", "p": "메이븐", "pr": 13500, "i": "9791196509446", "c": "교과추천도서", "f": "한국시", "s": "언어와문학", "g": "1", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196509446"}, {"no": 448, "t": "누군가 나를 살아주고 있어", "a": "백무산", "p": "창비", "pr": 13000, "i": "9788936425272", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425272"}, {"no": 449, "t": "눈물이 움직인다", "a": "손택수", "p": "창비", "pr": 13000, "i": "9788936425197", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425197"}, {"no": 450, "t": "마중도 배웅도 없이", "a": "박준", "p": "창비", "pr": 12000, "i": "9788936425166", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425166"}, {"no": 451, "t": "말 꿈 몸", "a": "김선오", "p": "북다", "pr": 13000, "i": "9791170613671", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170613671"}, {"no": 452, "t": "반대편에서 만나", "a": "송정원", "p": "창비", "pr": 13000, "i": "9788936425203", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425203"}, {"no": 453, "t": "산다는 슬픔", "a": "박경리", "p": "다산책방", "pr": 14000, "i": "9791130675381", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130675381"}, {"no": 454, "t": "살아 있는 것은 아름답다", "a": "신경림", "p": "창비", "pr": 13000, "i": "9788936425180", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425180"}, {"no": 455, "t": "삶의 어떤 기술", "a": "윤유나", "p": "창비", "pr": 12000, "i": "9788936425142", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425142"}, {"no": 456, "t": "순간이 시가 되다 폰카 시", "a": "김미희", "p": "빚은책들", "pr": 13800, "i": "9791171210510", "c": "추천 및 신간", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171210510"}, {"no": 457, "t": "오래된 시의 초대", "a": "안희진", "p": "포르체", "pr": 18000, "i": "9791193584965", "c": "교과추천도서", "f": "한국시", "s": "언어와문학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193584965"}, {"no": 458, "t": "우리 없이 빛난 아침", "a": "최현우", "p": "창비", "pr": 13000, "i": "9788936425173", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425173"}, {"no": 459, "t": "우리는 모두 이불에서 태어난걸요", "a": "봉주연", "p": "문학과지성사", "pr": 12000, "i": "9788932044347", "c": "추천 및 신간", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788932044347"}, {"no": 460, "t": "우울과 경청", "a": "이민하", "p": "창비", "pr": 13000, "i": "9788936425265", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425265"}, {"no": 461, "t": "조금 깨물고 몰래 버리기", "a": "연정모", "p": "아침달", "pr": 12000, "i": "9791194324560", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194324560"}, {"no": 462, "t": "첨벙 다음은 파도", "a": "오산하", "p": "창비", "pr": 13000, "i": "9788936439873", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936439873"}, {"no": 463, "t": "편의점에서 잠깐", "a": "정호승", "p": "창비", "pr": 13000, "i": "9788936425227", "c": "교사신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936425227"}, {"no": 464, "t": "고층 입원실의 갱스터 할머니", "a": "양유진", "p": "21세기북스", "pr": 18800, "i": "9791171174508", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171174508"}, {"no": 465, "t": "구원에게", "a": "정영욱", "p": "부크럼", "pr": 18000, "i": "9791162145418", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162145418"}, {"no": 466, "t": "꿈은 없고요, 그냥 성공하고 싶습니다", "a": "홍민지", "p": "다산북스", "pr": 15000, "i": "9791130681276", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791130681276"}, {"no": 467, "t": "비효율의 사랑", "a": "최다은", "p": "김영사", "pr": 15800, "i": "9791173322433", "c": "교사신청", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173322433"}, {"no": 468, "t": "살리는 일", "a": "박소영", "p": "무제", "pr": 13500, "i": "9791197221972", "c": "교사신청", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197221972"}, {"no": 469, "t": "아무튼, 라디오", "a": "이애월", "p": "제철소", "pr": 12000, "i": "9791188343744", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188343744"}, {"no": 470, "t": "아무튼, 맛집", "a": "박재영", "p": "제철소", "pr": 12000, "i": "9791188343867", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188343867"}, {"no": 471, "t": "아무튼, 실험실", "a": "김현정", "p": "코난북스", "pr": 12000, "i": "9791188605286", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188605286"}, {"no": 472, "t": "아무튼, 아이돌", "a": "윤혜은", "p": "제철소", "pr": 12000, "i": "9791188343492", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188343492"}, {"no": 473, "t": "아무튼, 야구", "a": "김영글", "p": "위고", "pr": 12000, "i": "9791193044353", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193044353"}, {"no": 474, "t": "아무튼, 인터뷰", "a": "은유", "p": "제철소", "pr": 12000, "i": "9791188343812", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188343812"}, {"no": 475, "t": "아무튼, 친구", "a": "양다솔", "p": "위고", "pr": 12000, "i": "9791193044049", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193044049"}, {"no": 476, "t": "오춘실의 사계절", "a": "김효선", "p": "낮은산", "pr": 17000, "i": "9791155251829", "c": "교사신청", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251829"}, {"no": 477, "t": "일본 광고 카피 도감", "a": "오하림", "p": "서교책방", "pr": 18800, "i": "9791199555112", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199555112"}, {"no": 478, "t": "자매일기", "a": "박소영.박수영", "p": "무제", "pr": 18000, "i": "9791197221903", "c": "교사신청", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197221903"}, {"no": 479, "t": "전국축제자랑", "a": "김혼비.박태하", "p": "민음사", "pr": 15000, "i": "9788937413711", "c": "교사신청", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788937413711"}, {"no": 480, "t": "챗지피티 시대의 고민 상담", "a": "배희열 외", "p": "퍼스널에디터", "pr": 19500, "i": "9791199312913", "c": "추천 및 신간", "f": "한국에세이", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791199312913"}, {"no": 481, "t": "나의 완벽한 장례식", "a": "조현선", "p": "북로망스", "pr": 19000, "i": "9791124038192", "c": "교과추천도서", "f": "한국판타지/환상소설", "s": "개인과사회", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124038192"}, {"no": 482, "t": "3월의 눈", "a": "배삼식", "p": "민음사", "pr": 22000, "i": "9788937420580", "c": "추천 및 신간", "f": "한국희곡", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788937420580"}, {"no": 483, "t": "무해한 복숭아", "a": "이은규", "p": "아침달", "pr": 12000, "i": "9791189467845", "c": "학생, 학부모신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791189467845"}, {"no": 484, "t": "마침내 멸망하는 여름", "a": "정", "p": "부크크", "pr": 11000, "i": "9791141087845", "c": "학생, 학부모신청", "f": "한국시", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141087845"}, {"no": 485, "t": "세계 축제와 여행", "a": "김승준", "p": "피앤씨에듀(pnc edu)", "pr": 23000, "i": "9791188782888", "c": "교과추천도서", "f": "관광학", "s": "언어습득", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188782888"}, {"no": 486, "t": "드디어 만나는 지리학 수업", "a": "이동민", "p": "현대지성", "pr": 19900, "i": "9791139720761", "c": "추천 및 신간", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139720761"}, {"no": 487, "t": "중국의 고구려사 왜곡", "a": "최광식", "p": "살림", "pr": 9800, "i": "9788952201850", "c": "교과추천도서", "f": "교양 인문학", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788952201850"}, {"no": 488, "t": "드디어 만나는 대만사 수업", "a": "우이룽", "p": "현대지성", "pr": 16900, "i": "9791139718492", "c": "추천 및 신간", "f": "동양사일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791139718492"}, {"no": 489, "t": "10대를 위한 사피엔스", "a": "벵트 에릭 엥홀름", "p": "미래엔아이세움", "pr": 15000, "i": "9791164135653", "c": "학생, 학부모신청", "f": "세계사", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791164135653"}, {"no": 490, "t": "벌거벗은 세계사 1", "a": "신동민 그림", "p": "아울북", "pr": 15800, "i": "9788950900830", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900830"}, {"no": 491, "t": "벌거벗은 세계사 10", "a": "최호정 그림", "p": "아울북", "pr": 16800, "i": "9788950900922", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900922"}, {"no": 492, "t": "벌거벗은 세계사 11", "a": "최호정 그림", "p": "아울북", "pr": 16800, "i": "9791173572616", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173572616"}, {"no": 493, "t": "벌거벗은 세계사 12", "a": "tvN〈벌거벗은 세계사〉제작팀 기획", "p": "아울북", "pr": 16800, "i": "9791173572623", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173572623"}, {"no": 494, "t": "벌거벗은 세계사 13", "a": "최호정 그림", "p": "아울북", "pr": 16900, "i": "9791173572630", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173572630"}, {"no": 495, "t": "벌거벗은 세계사 14", "a": "최호정 그림", "p": "아울북", "pr": 16900, "i": "9791173572647", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791173572647"}, {"no": 496, "t": "벌거벗은 세계사 2", "a": "최호정 그림", "p": "아울북", "pr": 15800, "i": "9788950900847", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900847"}, {"no": 497, "t": "벌거벗은 세계사 3", "a": "최호정 그림", "p": "아울북", "pr": 15800, "i": "9788950900854", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900854"}, {"no": 498, "t": "벌거벗은 세계사 4", "a": "최호정 그림", "p": "아울북", "pr": 15800, "i": "9788950900861", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900861"}, {"no": 499, "t": "벌거벗은 세계사 5", "a": "최호정 그림", "p": "아울북", "pr": 15800, "i": "9788950900878", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900878"}, {"no": 500, "t": "벌거벗은 세계사 6", "a": "최호정 그림", "p": "아울북", "pr": 15800, "i": "9788950900885", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900885"}, {"no": 501, "t": "벌거벗은 세계사 7", "a": "최호정 그림", "p": "아울북", "pr": 15800, "i": "9788950900892", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900892"}, {"no": 502, "t": "벌거벗은 세계사 8", "a": "최호정 그림", "p": "아울북", "pr": 16800, "i": "9788950900908", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900908"}, {"no": 503, "t": "벌거벗은 세계사 9", "a": "tvN〈벌거벗은 세계사〉제작팀 기획", "p": "아울북", "pr": 16800, "i": "9788950900915", "c": "교과추천도서", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788950900915"}, {"no": 504, "t": "용선생 교과서 세계사 1", "a": "사회평론 역사연구소", "p": "사회평론", "pr": 16000, "i": "9791162789", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162789"}, {"no": 505, "t": "용선생 교과서 세계사 2", "a": "사회평론 역사연구소", "p": "사회평론", "pr": 16000, "i": "9791162796", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162796"}, {"no": 506, "t": "한눈에 쏙 세계사 1", "a": "김일옥", "p": "열다", "pr": 12000, "i": "9791190267182", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267182"}, {"no": 507, "t": "한눈에 쏙 세계사 2", "a": "서지원", "p": "열다", "pr": 12000, "i": "9791190267199", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267199"}, {"no": 508, "t": "한눈에 쏙 세계사 3", "a": "위문숙", "p": "열다", "pr": 12000, "i": "9791190267205", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267205"}, {"no": 509, "t": "한눈에 쏙 세계사 4", "a": "신현수", "p": "열다", "pr": 12000, "i": "9791190267281", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267281"}, {"no": 510, "t": "한눈에 쏙 세계사 5", "a": "박효연", "p": "열다", "pr": 12000, "i": "9791190267298", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267298"}, {"no": 511, "t": "한눈에 쏙 세계사 6", "a": "김일옥", "p": "열다", "pr": 12000, "i": "9791190267304", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267304"}, {"no": 512, "t": "한눈에 쏙 세계사 7", "a": "신현수", "p": "열다", "pr": 12000, "i": "9791190267366", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267366"}, {"no": 513, "t": "한눈에 쏙 세계사 8", "a": "위문숙", "p": "열다", "pr": 12000, "i": "9791190267373", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267373"}, {"no": 514, "t": "한눈에 쏙 세계사 9", "a": "박효연", "p": "열다", "pr": 12000, "i": "9791190267380", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791190267380"}, {"no": 515, "t": "한눈에 펼쳐보는 세계 전쟁 그림책", "a": "홍건국", "p": "진선아이", "pr": 18000, "i": "9791193003886", "c": "추천 및 신간", "f": "세계사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193003886"}, {"no": 516, "t": "로빈의 다시 쓰는 세계사", "a": "로빈의 역사 기록", "p": "흐름출판", "pr": 23000, "i": "9788965967835", "c": "추천 및 신간", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965967835"}, {"no": 517, "t": "벌거벗은 세계사 : 과학편", "a": "tvN〈벌거벗은 세계사〉제작팀", "p": "교보문고(단행본)", "pr": 24000, "i": "9791170612476", "c": "추천 및 신간", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170612476"}, {"no": 518, "t": "벌거벗은 세계사 : 라이벌편", "a": "tvN〈벌거벗은 세계사〉제작팀", "p": "교보문고(단행본)", "pr": 24000, "i": "9791170613657", "c": "추천 및 신간", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170613657"}, {"no": 519, "t": "빅 아틀라스", "a": "올리비에 고다르", "p": "여문책", "pr": 30000, "i": "9791124088012", "c": "추천 및 신간", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124088012"}, {"no": 520, "t": "알면 더 재밌는 월드컵 역사", "a": "한지용", "p": "초봄책방", "pr": 16800, "i": "9791194847021", "c": "학생, 학부모신청", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194847021"}, {"no": 521, "t": "이 정도만 알면 되는 세계사", "a": "김봉중", "p": "빅피시", "pr": 18800, "i": "9791124137178", "c": "추천 및 신간", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124137178"}, {"no": 522, "t": "한 번은 꼭 읽어야 할 20세기 세계사", "a": "이영숙", "p": "블랙피쉬", "pr": 18500, "i": "9788968335358", "c": "추천 및 신간", "f": "세계사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788968335358"}, {"no": 523, "t": "아틀라스 일본사", "a": "일본사학회", "p": "사계절", "pr": 36000, "i": "9788958285236", "c": "추천 및 신간", "f": "일본사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788958285236"}, {"no": 524, "t": "여행하는 일본사", "a": "구완회", "p": "따비", "pr": 25000, "i": "9791192169415", "c": "학생, 학부모신청", "f": "일본사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192169415"}, {"no": 525, "t": "무심코 지나쳤던 우리동네 독립운동가 이야기", "a": "유정호", "p": "믹스커피", "pr": 20000, "i": "9791170436", "c": "추천 및 신간", "f": "일제치하/항일시대", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791170436"}, {"no": 526, "t": "지도를 펼치고 전쟁 대신 평화", "a": "유정애", "p": "푸른역사", "pr": 14000, "i": "9791156123026", "c": "추천 및 신간", "f": "전쟁/평화 이야기", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156123026"}, {"no": 527, "t": "아틀라스 중국사", "a": "박한제 외", "p": "사계절", "pr": 36000, "i": "9788958289081", "c": "추천 및 신간", "f": "중국사 일반", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788958289081"}, {"no": 528, "t": "아틀라스 중앙유라시아사", "a": "김호동", "p": "사계절", "pr": 36000, "i": "9788958289326", "c": "추천 및 신간", "f": "중앙아시아사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788958289326"}, {"no": 529, "t": "세계사를 한눈에 꿰뚫는 대단한 지리", "a": "팀 마샬", "p": "비룡소", "pr": 18000, "i": "9788949189543", "c": "추천 및 신간", "f": "지리/지도책", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788949189543"}, {"no": 530, "t": "10대라면 반드시 알아야 할 한국 고대사", "a": "고창민", "p": "팬덤북스", "pr": 20000, "i": "9791161693897", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791161693897"}, {"no": 531, "t": "그 유물, 진짜로 봤어?", "a": "박찬희.배성호", "p": "철수와영희", "pr": 17000, "i": "9791171530373", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530373"}, {"no": 532, "t": "반전 있는 조선 역사", "a": "문부일", "p": "마음이음", "pr": 15000, "i": "9791194494072", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194494072"}, {"no": 533, "t": "요즘 10대를 위한 최소한의 미국사", "a": "김봉중", "p": "빅피시", "pr": 16800, "i": "9791124137338", "c": "추천 및 신간", "f": "청소년 역사", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124137338"}, {"no": 534, "t": "요즘 10대를 위한 최소한의 한국사", "a": "임소미", "p": "빅피시", "pr": 16800, "i": "9791194033967", "c": "추천 및 신간", "f": "청소년 역사", "s": "과학", "g": "2", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194033967"}, {"no": 535, "t": "읽자마자 사건과 인물이 보이는 세계사 연대기", "a": "아즈하타 가즈유키", "p": "보누스", "pr": 16800, "i": "9788964947746", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964947746"}, {"no": 536, "t": "친절한 세계사 여행", "a": "파스칼 부쉬에.카트린 루아조", "p": "반니출판", "pr": 22000, "i": "9791124280409", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124280409"}, {"no": 537, "t": "평행 역사 수업", "a": "우현주 외", "p": "주니어태학", "pr": 17500, "i": "9791168103405", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168103405"}, {"no": 538, "t": "한 번에 비교해 이해하는 중학 한국사 세계사 1", "a": "송영심", "p": "글담출판", "pr": 18000, "i": "9791191309942", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191309942"}, {"no": 539, "t": "한국사 속 별별 사이", "a": "유정호", "p": "북트리거", "pr": 17500, "i": "9791193378403", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193378403"}, {"no": 540, "t": "한중일 역사 평화 수업", "a": "홍성화", "p": "우리학교", "pr": 15000, "i": "9791167553577", "c": "추천 및 신간", "f": "청소년 역사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791167553577"}, {"no": 541, "t": "0시의 고대 인류 탐험", "a": "이경덕", "p": "다른", "pr": 16000, "i": "9791156337263", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156337263"}, {"no": 542, "t": "1일 1주제 9분 만에 끝내는 한국사", "a": "이종관", "p": "초록비책공방", "pr": 18500, "i": "9791124126097", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124126097"}, {"no": 543, "t": "나를 발견하는 인류학 수업", "a": "함세정", "p": "사계절", "pr": 16800, "i": "9791169813853", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791169813853"}, {"no": 544, "t": "선을 넘는 지리 이야기", "a": "성정원 외", "p": "서해문집", "pr": 16800, "i": "9791194413295", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194413295"}, {"no": 545, "t": "유네스코가 주목한 한국의 세계유산 1", "a": "김영옥 외", "p": "북멘토(도서출판)", "pr": 18000, "i": "9788963196343", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788963196343"}, {"no": 546, "t": "읽자마자 보이는 세계지리 사전", "a": "이찬희", "p": "보누스", "pr": 16800, "i": "9788964947333", "c": "추천 및 신간", "f": "청소년 인문/사회", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788964947333"}, {"no": 547, "t": "빼앗긴 나라의 한글 독립투사들", "a": "박용진", "p": "다른", "pr": 16000, "i": "9791156337201", "c": "추천 및 신간", "f": "청소년 인물", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791156337201"}, {"no": 548, "t": "랜드마크로 보는 한국사 이야기", "a": "구완회", "p": "머핀북", "pr": 19000, "i": "9791193798270", "c": "추천 및 신간", "f": "초등 한국사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193798270"}, {"no": 549, "t": "조선, 무엇이든 법대로", "a": "윤지선.이정환", "p": "마음이음", "pr": 15000, "i": "9791192183824", "c": "추천 및 신간", "f": "초등 한국사", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791192183824"}, {"no": 550, "t": "유산, 문화, 그리고 세계 유네스코 세계문화유산 탐방1", "a": "유용욱", "p": "진인진", "pr": 27000, "i": "9788963476377", "c": "추천 및 신간", "f": "한국문화유산", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788963476377"}, {"no": 551, "t": "지금은 대만을 읽을 시간", "a": "서울중국어교사회", "p": "민규", "pr": 16000, "i": "9791197742743", "c": "교과추천도서", "f": "홍콩/대만/마카오여행 가이드북", "s": "언어습득", "g": "3", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791197742743"}, {"no": 552, "t": "까페블러드", "a": "신간", "p": "", "pr": 0, "i": "9791175910638", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791175910638"}, {"no": 553, "t": "파란파란", "a": "신간", "p": "", "pr": 0, "i": "9788936457471", "c": "추천 및 신간", "f": "청소년 소설", "s": "", "g": "", "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788936457471"}];
+const MAY_DATA={"diff": {"name": "다름이 틀림이 아닐 때", "desc": "나와 다른 사람을 이해하고 싶다면", "color": "#378ADD", "books": [{"t": "인권, 세계를 이해하다", "a": "김누리 외", "i": "9791188215", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188215"}, {"t": "존엄, 자유, 평등, 연대로 만나는 인권 교과서", "a": "류은숙", "i": "9791155251577", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791155251577"}, {"t": "미래 세대를 위한 민주시민 이야기", "a": "정주진", "i": "9791171530335", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530335"}, {"t": "달력으로 배우는 인권 수업", "a": "인권재단 사람", "i": "9791168103146", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168103146"}, {"t": "골목에서 배우는 인권", "a": "정석 외", "i": "9791171530328", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530328"}, {"t": "지속가능한 세상에서 동물과 공존한다는 것", "a": "배성호.주수원", "i": "9788993690934", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788993690934"}, {"t": "마땅히 누려야 할 인권 탐구생활", "a": "이기규", "i": "9791188609208", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791188609208"}, {"t": "처음 시작하는 너와 나의 인권 수업", "a": "홍명진", "i": "9791162183465", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791162183465"}, {"t": "미래 세대를 위한 민주시민 이야기", "a": "정주진", "i": "9791171530335", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791171530335"}, {"t": "지구촌 아름다운 거래 탐구생활", "a": "한수정", "i": "9791186075555", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791186075555"}]}, "bookshelf": {"name": "엄마 아빠의 책장에서", "desc": "세대를 넘어 함께 읽고 싶다면", "color": "#1D9E75", "books": [{"t": "행복하냐는 질문에 대답할 수 없다면", "a": "알랭 드 보통.인생학교", "i": "9791168411371", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791168411371"}, {"t": "느낌의 공동체", "a": "신형철", "i": "9788954614511", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788954614511"}, {"t": "조용한 회복", "a": "박재연", "i": "9791194725206", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791194725206"}, {"t": "나로 살 결심", "a": "문유석", "i": "9791141613990", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791141613990"}, {"t": "누구나 시 하나쯤 가슴에 품고 산다", "a": "김선경 엮음", "i": "9791196509446", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791196509446"}, {"t": "나의 완벽한 장례식", "a": "조현선", "i": "9791124038192", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791124038192"}]}, "question": {"name": "세상에 질문을 던지는 사람", "desc": "왜?라는 질문을 멈추지 않는다면", "color": "#D4537E", "books": [{"t": "AI한테 내 생각을 맡겨도 될까?", "a": "박승억", "i": "9791193156384", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791193156384"}, {"t": "미디어 리터러시, 세상을 읽는 힘", "a": "강용철.정형근", "i": "9788946422131", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788946422131"}, {"t": "생각하는 힘, 글쓰기", "a": "임택균 외", "i": "9788978017879", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788978017879"}, {"t": "유시민의 글쓰기 특강", "a": "유시민", "i": "9788965133520", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788965133520"}, {"t": "질문으로 답을 찾는 인공지능 윤리 수업", "a": "박형빈", "i": "9788955969474", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788955969474"}, {"t": "질문으로 답을 찾는 인공지능 윤리 수업", "a": "박형빈", "i": "9788955969474", "ib": true, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9788955969474"}, {"t": "진실 탐정이 되자", "a": "팀 하포드", "i": "9791191311624", "ib": false, "al": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=9791191311624"}]}};
+const GREET_DATA=[{"country": "한국", "lang": "한국어", "text": "안녕하세요", "script": "한글", "color": "#1D9E75"}, {"country": "일본", "lang": "일본어", "text": "こんにちは", "script": "히라가나", "color": "#D85A30"}, {"country": "중국", "lang": "중국어", "text": "你好", "script": "한자", "color": "#D4537E"}, {"country": "태국", "lang": "태국어", "text": "สวัสดี", "script": "태국문자", "color": "#993556"}, {"country": "베트남", "lang": "베트남어", "text": "Xin chào", "script": "라틴(성조)", "color": "#C0392B"}, {"country": "인도", "lang": "힌디어", "text": "नमस्ते", "script": "데바나가리", "color": "#639922"}, {"country": "아랍", "lang": "아랍어", "text": "مرحباً", "script": "아랍문자", "color": "#BA7517"}, {"country": "터키", "lang": "터키어", "text": "Merhaba", "script": "라틴", "color": "#8E3A1F"}, {"country": "러시아", "lang": "러시아어", "text": "Привет", "script": "키릴문자", "color": "#3C3489"}, {"country": "프랑스", "lang": "프랑스어", "text": "Bonjour", "script": "라틴", "color": "#534AB7"}, {"country": "스페인", "lang": "스페인어", "text": "¡Hola!", "script": "라틴", "color": "#378ADD"}, {"country": "에티오피아", "lang": "암하라어", "text": "ሰላም", "script": "게으즈", "color": "#0F6E56"}, {"country": "케냐", "lang": "스와힐리어", "text": "Jambo", "script": "라틴", "color": "#5D4037"}, {"country": "브라질", "lang": "포르투갈어", "text": "Olá!", "script": "라틴", "color": "#27AE60"}, {"country": "미국·영국", "lang": "영어", "text": "Hello!", "script": "라틴", "color": "#1A5276"}];
+const LIB_URL='https://read365.edunet.net/PureScreen/SchoolSearch?schoolName=경북대학교사범대학부설중학교&provCode=D10&neisCode=A000003491';
+
+function openAladin(url){try{window.open(url,'_blank')}catch(e){location.href=url}}
+function openLink(url){try{window.open(url,'_blank')}catch(e){location.href=url}}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function makeLibUrl(title){
+  const base='https://read365.edunet.net/PureScreen/SchoolSearch';
+  return base+'?schoolName=경북대학교사범대학부설중학교&provCode=D10&neisCode=A000003491&keyword='+encodeURIComponent(title);
+}
+function makeAlUrl(isbn){if(!isbn||isbn==='nan'||isbn==='NaN')return '';const c=isbn.replace(/[^0-9X]/g,'');if(c.length<10||c.length>13)return '';return 'https://www.aladin.co.kr/shop/wproduct.aspx?ISBN='+c}
+
+/* ── QUIZ ── */
+const QUIZ=[
+  {q:'지금 내 기분은?',opts:[
+    {l:'😤 뭔가 화가 남',r:'어쩌다 기후 악당',i:'9791160156386',h:'기후 위기에 분노 에너지를 쏟아보세요'},
+    {l:'🫠 집중이 안 됨',r:'집중력 죽이기',i:'9791193904725',h:'뇌가 왜 이러는지 알 수 있어요'},
+    {l:'🤩 신기한 거 보고 싶음',r:'이토록 굉장한 세계',i:'9791157843862',h:'세상이 완전히 달라 보일 거예요'},
+    {l:'📖 그냥 소설 읽고 싶음',r:'달리기의 맛',i:'9791192936611',h:'가볍게 빠져드는 청소년 소설'}
+  ]},
+  {q:'요즘 가장 궁금한 게 뭐야?',opts:[
+    {l:'🤖 AI랑 미래',r:'AI한테 내 생각을 맡겨도 될까?',i:'9791193156384',h:'비판적 사고 + IB 교과 추천'},
+    {l:'🌍 지구와 환경',r:'침묵의 봄',i:'9788961305587',h:'환경의 고전, 지금 읽어야 할 이유'},
+    {l:'💰 돈이랑 경제',r:'청소년을 위한 돈이 되는 경제 교과서',i:'9791197285509',h:'IB 개인과사회 교과 연계'},
+    {l:'🎨 예술·디자인',r:'디자인의 디자인',i:'9788974791797',h:'IB 예술 교과 추천 — 하라 켄야'}
+  ]},
+  {q:'지금 내 마음은?',opts:[
+    {l:'🧘 복잡하고 지침',r:'조용한 회복',i:'9791193256252',h:'지친 마음을 위한 따뜻한 책'},
+    {l:'🔥 뭔가 해보고 싶음',r:'바람을 길들인 풍차소년',i:'9788974189983',h:'IB 언어습득 추천 — 진짜 이야기'},
+    {l:'💭 철학적 생각이 듦',r:'행복하냐는 질문에 대답할 수 없다면',i:'9791189217518',h:'알랭 드 보통 · IB 도덕 추천'},
+    {l:'😂 웃긴 거 보고 싶음',r:'엉뚱한 과학책',i:'9791189472528',h:'과학인데 웃겨요, 진짜로'}
+  ]}
+];
+let qStep=0;
+function renderQuiz(){
+  const q=QUIZ[qStep%QUIZ.length];
+  document.getElementById('qtext').textContent=q.q;
+  const opts=document.getElementById('qopts');
+  opts.innerHTML='';
+  document.getElementById('qresult').classList.remove('show');
+  q.opts.forEach(o=>{
+    const b=document.createElement('button');
+    b.className='q-btn';b.textContent=o.l;
+    b.onclick=()=>{
+      const alUrl=makeAlUrl(o.i);
+      const alBtn=alUrl?`<button class="qr-btn qr-btn-al" onclick="openAladin('${alUrl}')">알라딘 연결 ↗</button>`:'';
+      const sr=`<button class="qr-btn qr-btn-sr" onclick="doQuizSearch('${o.r.replace(/'/g,"\'")}')">도서 검색 🔍</button>`;
+      document.getElementById('qresult').innerHTML=`<div class="qr-title">📚 ${esc(o.r)}</div><div class="qr-desc">${esc(o.h)}</div><div class="qr-btns">${alBtn}${sr}</div>`;
+      document.getElementById('qresult').classList.add('show');
+      qStep++;
+      setTimeout(renderQuiz,4500);
+    };
+    opts.appendChild(b);
+  });
+}
+renderQuiz();
+function doQuizSearch(t){document.getElementById('search-input').value=t;doSearch();document.getElementById('search').scrollIntoView({behavior:'smooth'})}
+
+/* ── HERO SEARCH ── */
+function heroSearch(){document.getElementById('search-input').value=document.getElementById('hero-search-inp').value;doSearch()}
+function goSearch(){heroSearch();document.getElementById('search').scrollIntoView({behavior:'smooth'})}
+
+/* ── MAY THEMES ── */
+const themeKeys=Object.keys(MAY_DATA);
+themeKeys.forEach((k,i)=>{
+  const t=MAY_DATA[k];
+  const tab=document.createElement('button');
+  tab.className='th-tab'+(i===0?' on':'');
+  tab.textContent=t.name;
+  tab.onclick=()=>{document.querySelectorAll('.th-tab').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.th-pane').forEach(x=>x.classList.remove('on'));tab.classList.add('on');document.getElementById('tp-'+k).classList.add('on')};
+  document.getElementById('theme-tabs').appendChild(tab);
+  const pane=document.createElement('div');pane.id='tp-'+k;pane.className='th-pane'+(i===0?' on':'');
+  let h=`<div class="th-intro">${esc(t.desc)}</div><div class="th-location">📍 도서관 '열린마음 시간' 코너에 비치되어 있어요</div><div class="book-grid">`;
+  t.books.forEach(b=>{
+    const al=makeAlUrl(b.i);
+    h+=`<div class="bc" onclick="${al?`openAladin('${al}')`:''}"><div class="bc-title">${esc(b.t)}</div><div class="bc-author">${esc(b.a)}</div><div class="bc-tags">${b.ib?'<span class="tag tag-ib">IB 교과</span>':''}</div>${al?'<span class="bc-al">알라딘 ↗</span>':''}</div>`;
+  });
+  h+=`</div>`;pane.innerHTML=h;
+  document.getElementById('theme-panes').appendChild(pane);
+});
+
+/* ── GUESS GAME ── */
+const GUESS_Q=[
+  {q:'이 중 IB 교과 추천 도서가 아닌 것은?',
+   opts:['침묵의 봄','엉뚱한 과학책','디자인의 디자인','수학의 숲을 걷다'],
+   ans:1,exp:'엉뚱한 과학책은 추천 및 신간 도서예요. 나머지 셋은 IB 교과 추천 도서입니다!'},
+  {q:'세계 각국 인사말 중 아랍어로 "안녕"은?',
+   opts:['Bonjour','مرحباً','Γεια σου','Olá!'],
+   ans:1,exp:'مرحباً(마르하반)이 아랍어 인사말이에요. Bonjour는 프랑스어, Γεια σου는 그리스어, Olá는 포르투갈어예요!'},
+  {q:'「바람을 길들인 풍차소년」의 주인공 윌리엄 캄쾀바는 몇 살에 혼자 풍력 발전기를 만들었을까?',
+   opts:['11살','14살','17살','20살'],
+   ans:1,exp:'윌리엄은 14살에 고물 부품으로 풍력 발전기를 만들었어요. IB 언어습득 추천 도서예요!'},
+];
+let gStep=0;
+function renderGuess(){
+  const q=GUESS_Q[gStep%GUESS_Q.length];
+  document.getElementById('guess-q').textContent=q.q;
+  const opts=document.getElementById('guess-opts');opts.innerHTML='';
+  document.getElementById('guess-result').classList.remove('show');
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');b.className='g-btn';b.textContent=o;
+    b.onclick=()=>{
+      document.querySelectorAll('.g-btn').forEach(x=>x.classList.add('sel'));
+      b.style.background=i===q.ans?'var(--g)':'var(--r)';b.style.color='#fff';b.style.borderColor=i===q.ans?'var(--g)':'var(--r)';
+      document.getElementById('guess-result').innerHTML=(i===q.ans?'🎉 정답! ':'😅 아쉽! ')+q.exp+' <button style="margin-left:8px;font-size:11px;padding:3px 8px;border-radius:10px;border:1.5px solid var(--g);background:#fff;color:var(--g);cursor:pointer" onclick="gStep++;renderGuess()">다음 문제 →</button>';
+      document.getElementById('guess-result').classList.add('show');
+    };
+    opts.appendChild(b);
+  });
+}
+renderGuess();
+
+/* ── GREETINGS ── */
+GREET_DATA.forEach(g=>{
+  const d=document.createElement('div');d.className='gr-card';d.style.background=g.color;
+  d.innerHTML=`<div class="gr-text">${g.text}</div><div class="gr-rom">${g.lang}</div><div class="gr-country">${g.country}</div><div class="gr-script">${g.script}</div>`;
+  document.getElementById('gr-grid').appendChild(d);
+});
+
+/* ── SEARCH ── */
+const CATS=['전체','교과추천도서'];
+let activeFilter='전체',searchPage=1;const PAGE=24;let curResults=[];
+CATS.forEach(c=>{
+  const b=document.createElement('button');b.className='f-btn'+(c==='전체'?' on':'');b.textContent=c==='전체'?'전체 보기':c==='교과추천도서'?'IB 교과추천':c;
+  b.onclick=()=>{document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('on'));b.classList.add('on');activeFilter=c;searchPage=1;doSearch()};
+  document.getElementById('filter-row').appendChild(b);
+});
+function doSearch(){
+  const q=(document.getElementById('search-input').value||'').trim().toLowerCase();
+  curResults=BOOKS.filter(b=>{
+    if(activeFilter!=='전체'&&b.c!==activeFilter)return false;
+    if(!q)return true;
+    return b.t.toLowerCase().includes(q)||b.a.toLowerCase().includes(q)||b.f.toLowerCase().includes(q);
+  });
+  searchPage=1;renderSearch();
+}
+function renderSearch(){
+  const s=curResults.slice(0,searchPage*PAGE);
+  const total=curResults.length;
+  document.getElementById('s-count').textContent='검색 결과 '+total+'권';
+  document.getElementById('s-results').innerHTML=s.map(b=>{
+    const al=makeAlUrl(b.i);
+    const isIB=b.c==='교과추천도서';
+    // 배지: IB 교과추천 / IB 과목 / 학년
+    const badges=[
+      isIB?'<span class="tag tag-ib">IB 교과추천</span>':'',
+      b.s?`<span class="tag tag-subj">${esc(b.s)}</span>`:'',
+      b.g?`<span class="tag tag-grade">${esc(b.g)}학년</span>`:''
+    ].join('');
+    // 카테고리 라벨 (IB 교과추천만 표시)
+    const catLabel=isIB?'<span class="sr-cat-tag cat-ib">IB 교과추천</span>':'';
+    // 알라딘 버튼
+    const alPart=al
+      ?`<span class="sr-al-btn" onclick="event.stopPropagation();openAladin('${al}')">알라딘 ↗</span>`
+      :`<span class="sr-al-none">ISBN 없음</span>`;
+    // 독서로 버튼 (항상 표시, 제목으로 검색)
+    const libUrl=makeLibUrl(b.t);
+    const libPart=`<span class="sr-lib-btn" onclick="event.stopPropagation();openLink('${libUrl}')">독서로 ↗</span>`;
+    // 분야
+    const fieldPart=b.f?`<div class="sr-field">📂 ${esc(b.f)}</div>`:'';
+    return `<div class="sr" onclick="${al?`openAladin('${al}')`:''}" style="${al?'':'cursor:default'}">
+      <div class="sr-badges">${badges}</div>
+      <div class="sr-title">${esc(b.t)}</div>
+      <div class="sr-author">${esc(b.a)}${b.p?' · '+esc(b.p):''}</div>
+      ${fieldPart}
+      <div class="sr-bottom">${catLabel}<div class="sr-btns">${al?alPart:''}${libPart}</div></div>
+    </div>`;
+  }).join('');
+  document.getElementById('load-btn').style.display=s.length<total?'block':'none';
+}
+function loadMore(){searchPage++;renderSearch()}
+doSearch();
+
+/* ── SITUATION DATA ── */
+const SITUATIONS = [
+  {cat:'😊 기분·감정',items:[
+    ['😔 오늘 마음이 무거워요','조용한 회복'],['😤 화가 나는데 이유를 모르겠어요','어쩌다 기후 악당'],
+    ['😊 설레고 기대돼요','달리기의 맛'],['😰 걱정되고 불안해요','까칠하고 예민한 사춘기를 위한'],
+    ['😂 웃긴 게 읽고 싶어요','엉뚱한 과학책'],['🥱 그냥 아무 생각 없이 읽고 싶어요','당근이세요?'],
+    ['💭 철학적 기분이에요','열세 살부터 시작하는 철학 사고 수업'],['🔥 뭔가 도전하고 싶어요','바람을 길들인 풍차소년']
+  ]},
+  {cat:'📚 읽고 싶은 장르',items:[
+    ['🕵️ 미스터리·추리 소설','이렇게 된 이상 포항으로 간다'],['👻 공포·호러','양재천 기담'],
+    ['🚀 SF·미래 이야기','아무도 오지 않는 곳에서'],['💕 로맨스·설레는 이야기','연애 운세, 너에게 적중'],
+    ['🌱 성장·우정 이야기','호구'],['📖 짧은 시집','누구나 시 하나쯤 가슴에 품고 산다'],
+    ['😆 가볍고 재밌는 만화','도토리 문화센터'],['✍️ 에세이 처음 읽어보고 싶어요','조용한 회복']
+  ]},
+  {cat:'🧪 관심 주제',items:[
+    ['🌍 기후·환경 문제','어쩌다 기후 악당'],['🤖 AI·인공지능','AI한테 내 생각을 맡겨도 될까?'],
+    ['⚽ 스포츠 이야기','야구 교과서'],['🎵 음악·뮤지컬','30일 밤의 뮤지컬'],
+    ['🎨 미술·디자인','디자인의 디자인'],['🧬 생물·과학 신기한 거','이토록 굉장한 세계'],
+    ['💰 돈·경제 알고 싶어요','나의 첫 금융 공부'],['🏛️ 역사가 궁금해요','벌거벗은 세계사 1'],
+    ['⚖️ 인권·사회 문제','인권, 세계를 이해하다'],['🌏 세계 여러 나라','세계사를 한눈에 꿰뚫는 대단한 지리']
+  ]},
+  {cat:'🎓 학교·학습 상황',items:[
+    ['📝 수행평가 주제 찾고 있어요','진실 탐정이 되자'],['🔬 탐구 보고서 참고자료','Dr. 아톰과 함께하는 주제 맞춤 탐구보고서'],
+    ['✏️ 글쓰기 잘하고 싶어요','유시민의 글쓰기 특강'],['📰 비문학 독해력 키우고 싶어요','비문학이 읽히는 최소한의 배경지식'],
+    ['🇬🇧 영어 원서 도전해볼게요','The Boy Who Harnessed the Wind'],['🔢 수학이 싫은데 재밌게 하려면','나의 수학 사춘기'],
+    ['🏫 논술·독서기록장용 책','수행 만점 독서법'],['📚 독서를 처음 시작하고 싶어요','달리기의 맛']
+  ]},
+  {cat:'👤 내 상황·나이',items:[
+    ['🆕 중1이에요, 아직 낯설어요','중1의 세계'],['😑 중2, 다 하기 싫어요','이 망할 열네 살'],
+    ['🎯 중3, 고등학교가 걱정돼요','중3을 위한 고등학교 사용 설명서'],['🌀 요즘 내 감정이 너무 복잡해요','까칠하고 예민한 사춘기를 위한'],
+    ['🤔 나 자신을 더 알고 싶어요','나로 살 결심'],['👨‍👩‍👦 부모님과 함께 읽을 책','엄마가 유령이 되었어!'],
+    ['🎁 친구 선물로 줄 책 찾아요','코너를 달리는 방법'],['💤 자기 전에 가볍게 읽을 책','아무튼, 라디오']
+  ]},
+  {cat:'🌿 IB 학습자상 연계',items:[
+    ['🤔 탐구하는 사람 되고 싶어요','질문으로 답을 찾는 인공지능 윤리 수업'],
+    ['🌐 열린 마음 키우고 싶어요','존엄, 자유, 평등, 연대로 만나는 인권 교과서'],
+    ['⚖️ 원칙을 지키는 사람','생각하지 않는 죄'],['🌍 균형 잡힌 시각 기르고 싶어요','미디어 리터러시, 세상을 읽는 힘'],
+    ['❤️ 배려하는 사람이 되고 싶어요','달력으로 배우는 인권 수업'],
+    ['💪 도전하는 용기','바람을 길들인 풍차소년'],['🔍 사려 깊은 사람','느낌의 공동체']
+  ]},
+  {cat:'🗓️ 계절·기념일',items:[
+    ['🌸 5월 가정의 달','엄마가 유령이 되었어!'],['🌿 초여름 기분에 맞는 책','여름의 비행운'],
+    ['👨 어버이날 선물할 책','나로 살 결심'],['🌍 환경의 날 (6.5)','어쩌다 기후 악당'],
+    ['✨ 방학 전 마지막 독서','호구']
+  ]}
+];
+
+function buildSituations(){
+  const grid = document.getElementById('sit-grid');
+  SITUATIONS.forEach(cat=>{
+    const label = document.createElement('span');
+    label.className='sit-cat'; label.textContent=cat.cat;
+    grid.appendChild(label);
+    cat.items.forEach(([label2,kw])=>{
+      const b=document.createElement('button');
+      b.className='sit-btn'; b.textContent=label2;
+      b.onclick=()=>{
+        document.querySelectorAll('.sit-btn').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        document.getElementById('search-input').value=kw;
+        doSearch();
+        document.getElementById('search').scrollIntoView({behavior:'smooth'});
+      };
+      grid.appendChild(b);
+    });
+  });
+}
+buildSituations();
+
+/* ── IB FILTER ── */
+const IB_SUBJECTS=['전체','언어와문학','언어습득','개인과사회','과학','수학','예술','디자인','체육과보건','진로'];
+let activeIB='전체';
+IB_SUBJECTS.forEach(s=>{
+  const b=document.createElement('button');
+  b.className='f-btn'+(s==='전체'?' on':''); b.textContent=s==='전체'?'전체 IB':s;
+  b.onclick=()=>{
+    document.querySelectorAll('#ib-filter-row .f-btn').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); activeIB=s; searchPage=1; doSearch();
+  };
+  document.getElementById('ib-filter-row').appendChild(b);
+});
+
+/* doSearch 확장 – IB 과목 필터 포함 */
+const origDoSearch=doSearch;
+doSearch=function(){
+  const q=(document.getElementById('search-input').value||'').trim().toLowerCase();
+  curResults=BOOKS.filter(b=>{
+    if(activeFilter!=='전체'&&b.c!==activeFilter)return false;
+    if(activeIB!=='전체'&&b.s!==activeIB)return false;
+    if(!q)return true;
+    return b.t.toLowerCase().includes(q)||b.a.toLowerCase().includes(q)||
+           b.f.toLowerCase().includes(q)||(b.s&&b.s.toLowerCase().includes(q))||
+           (b.p&&b.p.toLowerCase().includes(q));
+  });
+  searchPage=1;renderSearch();
+};
+doSearch(); /* 초기화 재실행 */
+
+/* ── VOTE & REVIEW ── */
+const VOTE_BOOKS=[
+  {no:409,t:'호구',a:'김민서'},{no:396,t:'이 망할 열네 살',a:'김혜정'},
+  {no:384,t:'스카이다이빙',a:'문경민'},{no:371,t:'당근이세요?',a:'표명희'},
+  {no:403,t:'캐리커처',a:'단요'},{no:405,t:'트윈',a:'유진서'},
+  {no:379,t:'블랙북',a:'김하연'},{no:395,t:'유자는 없어',a:'김지현'},
+  {no:119,t:'엉뚱한 과학책',a:'김진우(은잡지)'},{no:123,t:'이토록 굉장한 세계',a:'에드 용'},
+  {no:186,t:'어쩌다 기후 악당',a:'권승문'},{no:15,t:'AI한테 내 생각을 맡겨도 될까?',a:'박승억'},
+  {no:442,t:'양재천 기담',a:'남유하'},{no:435,t:'아무도 오지 않는 곳에서',a:'천선란'},
+  {no:248,t:'도토리 문화센터 1',a:'난다'},{no:390,t:'연애 운세, 너에게 적중',a:'김경은 외'},
+  {no:391,t:'오늘만 최애 변경',a:'범유진'},{no:385,t:'시티 보이즈',a:'정보훈'},
+  {no:552,t:'까페블러드',a:''},{no:553,t:'파란파란',a:''}
+];
+const votes={};
+VOTE_BOOKS.forEach(b=>{ votes[b.no]=0; });
+
+function buildVoteGrid(){
+  const grid=document.getElementById('vr-grid');
+  grid.innerHTML='';
+  const sorted=[...VOTE_BOOKS].sort((a,b)=>(votes[b.no]||0)-(votes[a.no]||0));
+  sorted.forEach(b=>{
+    const card=document.createElement('div');card.className='vr-card';
+    card.innerHTML=`<div class="vr-title">${esc(b.t)}</div><div class="vr-author">${esc(b.a)}</div><div class="vr-heart-row"><button class="vr-heart" onclick="doVote(${b.no})">🤍</button><span class="vr-cnt" id="vc-${b.no}">${votes[b.no]}</span></div>`;
+    grid.appendChild(card);
+  });
+  // 투표된 책 강조
+  Object.entries(votes).forEach(([no,v])=>{
+    if(v>0){const el=document.getElementById('vc-'+no);if(el)el.previousElementSibling.textContent='❤️';}
+  });
+}
+function doVote(no){
+  votes[no]=(votes[no]||0)+1;
+  buildVoteGrid();
+}
+buildVoteGrid();
+
+/* 기대평 도서 목록 select 채우기 */
+function buildRevSelect(){
+  const sel=document.getElementById('rev-book-sel');
+  VOTE_BOOKS.forEach(b=>{
+    const opt=document.createElement('option');
+    opt.value=b.t; opt.textContent=b.t+(b.a?' ('+b.a+')':'');
+    sel.appendChild(opt);
+  });
+}
+buildRevSelect();
+
+const reviews=[];
+function submitReview(){
+  const bk=document.getElementById('rev-book-sel').value;
+  const tx=document.getElementById('rev-text-inp').value.trim();
+  if(!bk){alert('책을 선택해주세요!');return;}
+  if(!tx){alert('기대평을 입력해주세요!');return;}
+  reviews.unshift({book:bk,text:tx});
+  document.getElementById('rev-text-inp').value='';
+  renderReviews();
+}
+function renderReviews(){
+  const list=document.getElementById('rev-list');
+  if(reviews.length===0){list.innerHTML='<div style="font-size:13px;color:var(--mu)">아직 기대평이 없어요. 첫 번째 기대평을 남겨보세요!</div>';return;}
+  list.innerHTML=reviews.map(r=>`<div class="rev-item"><div class="rev-book">📖 ${esc(r.book)}</div><div class="rev-text">${esc(r.text)}</div></div>`).join('');
+}
+renderReviews();
+
+function vrTab(id){
+  document.querySelectorAll('.vr-tab').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.vr-pane').forEach(p=>p.classList.remove('on'));
+  document.getElementById('vp-'+id).classList.add('on');
+  event.currentTarget.classList.add('on');
+}
+
+/* ── GFORM SUBMIT ── */
+const gformEntries=[];
+/* ── 구글 시트 웹앱 URL — 배포 후 여기에 붙여넣기 ── */
+const SHEET_URL = '';  // ← Apps Script 웹앱 URL 입력
+
+function submitGform(){
+  const parent = document.getElementById('gf-parent').value.trim();
+  const cls    = document.getElementById('gf-class').value;
+  const child  = document.getElementById('gf-child').value.trim();
+  const msg    = document.getElementById('gf-msg').value.trim();
+  if(!parent||!cls||!child||!msg){
+    alert('필수 항목(*)을 모두 입력해주세요.'); return;
+  }
+  const type    = document.querySelector('input[name=gftype]:checked')?.value||'직접 쓴 말';
+  const privacy = document.querySelector('input[name=gfprivacy]:checked')?.value;
+  if(!privacy){
+    alert('공개 동의 여부를 선택해주세요.'); return;
+  }
+  const source = document.getElementById('gf-source').value.trim();
+  if((type==='책 속 문구'||type==='노래 가사'||type==='영화 대사')&&!source){
+    if(!confirm('출처를 입력하지 않으셨습니다. 학문적 진실성을 위해 출처를 남겨주시길 권장합니다. 그래도 제출하시겠습니까?')) return;
+  }
+  const btn = document.querySelector('.gf-submit');
+  btn.disabled = true; btn.textContent = '전송 중... ⏳';
+  const payload = {parent, cls, child, type, source, privacy, msg,
+                   timestamp: new Date().toLocaleString('ko-KR')};
+  if(!SHEET_URL){
+    gformEntries.push(payload); _gformSuccess(btn); return;
+  }
+  fetch(SHEET_URL, {
+    method:'POST', mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(payload)
+  })
+  .then(()=>{ gformEntries.push(payload); _gformSuccess(btn); })
+  .catch(err=>{
+    console.error(err);
+    alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    btn.disabled=false; btn.textContent='메시지 보내기 💌';
+  });
+}
+
+function _gformSuccess(btn){
+  const privacy = document.querySelector('input[name=gfprivacy]:checked')?.value;
+  const successEl = document.getElementById('gf-success');
+  const privacyMsg = privacy === '자녀에게만 전달'
+    ? '비공개로 접수됐어요. 자녀에게만 소중하게 전달됩니다.'
+    : '5월 12일부터 도서관 내 게시 및 카드로 제작하여 자녀에게 전달됩니다.';
+  successEl.innerHTML = `<strong style="color:var(--g);font-size:15px">✅ 소중한 메시지가 접수됐어요!</strong><br>
+    <span style="font-size:13px;color:var(--mu)">${privacyMsg}<br>가정의 달, 담쟁이글숲과 함께해 주셔서 감사합니다 🌿</span>`;
+  successEl.classList.add('show');
+  ['gf-parent','gf-child','gf-msg','gf-source'].forEach(id=>
+    document.getElementById(id).value='');
+  document.getElementById('gf-class').value='';
+  const radios = document.querySelectorAll('input[name=gfprivacy]');
+  radios.forEach(r => r.checked = false);
+  btn.disabled=false; btn.textContent='메시지 보내기 💌';
+}
+
+
+/* ── EXAMPLE FILL ── */
+function toggleEx(btn){
+  const body = document.getElementById('ex-body');
+  const arrow = document.getElementById('ex-arrow');
+  const isOpen = body.classList.toggle('open');
+  arrow.classList.toggle('open', isOpen);
+  btn.querySelector('.ex-arrow') && (btn.querySelector('.ex-arrow').textContent = isOpen ? '▴' : '▾');
+}
+function fillEx(type, text, source){
+  const radios = document.querySelectorAll('input[name=gftype]');
+  radios.forEach(r => { if(r.value === type) r.checked = true; });
+  document.getElementById('gf-msg').value = text;
+  if(source) document.getElementById('gf-source').value = source;
+  document.getElementById('gf-msg').scrollIntoView({behavior:'smooth', block:'center'});
+  document.getElementById('gf-msg').focus();
+}
+
+/* ── APA TOGGLE ── */
+function toggleApa(){
+  document.getElementById('apa-box').classList.toggle('open');
+}
+
+/* ── CUSTOM GREETING ── */
+const GC_COLORS=['#1D9E75','#D85A30','#D4537E','#378ADD','#534AB7','#BA7517','#639922','#993556','#C0392B','#3C3489','#27AE60','#8E3A1F','#5D4037','#1A5276','#16A085'];
+let gcIdx=0;
+function addCustomGreeting(){
+  const country = document.getElementById('gc-country').value.trim();
+  const lang    = document.getElementById('gc-lang').value.trim();
+  const text    = document.getElementById('gc-text').value.trim();
+  const script  = document.getElementById('gc-script').value.trim();
+  if(!country || !text){ alert('나라 이름과 인사말을 입력해주세요!'); return; }
+  const color = GC_COLORS[gcIdx % GC_COLORS.length]; gcIdx++;
+  const d = document.createElement('div');
+  d.className = 'gr-card'; d.style.background = color;
+  d.innerHTML = '<div class="gr-text">'+esc(text)+'</div>'
+              + '<div class="gr-rom">'+esc(lang||'')+'</div>'
+              + '<div class="gr-country">'+esc(country)+'</div>'
+              + '<div class="gr-script">'+esc(script||'직접 입력')+'</div>';
+  document.getElementById('gc-grid').appendChild(d);
+  ['gc-country','gc-lang','gc-text','gc-script'].forEach(id=>document.getElementById(id).value='');
+}
+
+</script>
+</body>
+</html>
